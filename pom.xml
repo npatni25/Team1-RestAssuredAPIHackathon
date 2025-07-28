@@ -3,4 +3,128 @@
   <groupId>Team1-RestAssuredAPIHackathon</groupId>
   <artifactId>Team1-RestAssuredAPIHackathon</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.14.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.18.1</version>
+</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.5.5</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>json-schema-validator</artifactId>
+    <version>5.5.5</version>
+</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>json-path</artifactId>
+    <version>5.5.5</version>
+</dependency>
+
+<!-- for JSONObject -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20231013</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.rest-assured/xml-path -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>xml-path</artifactId>
+    <version>5.5.5</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.11.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- Cucumber with TestNG -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.14.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest -->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>java-hamcrest</artifactId>
+    <version>2.0.0.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-core</artifactId>
+    <version>3.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-library -->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-library</artifactId>
+    <version>3.0</version>
+    <scope>test</scope>
+</dependency>
+
+	<!-- Extent Reports-->
+	<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>1.9.0</version> <!-- use latest version if possible -->
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.4.1</version>
+</dependency>
+
+<!-- To ignore slf4j error-->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>2.0.13</version> <!-- or latest -->
+</dependency>
+
+  	<dependency>
+  		<groupId>Automation_framework</groupId>
+  		<artifactId>selenium_framework</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>CucumberBDD_proj</groupId>
+  		<artifactId>CucumberBDD_proj</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  
 </project>
