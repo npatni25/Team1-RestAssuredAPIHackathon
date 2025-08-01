@@ -1,24 +1,34 @@
 package apiRequests;
 
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
+
+import utils.ConfigReader;
 import utils.ExcelReader;
+import utils.jsonReader;
 
 import java.util.Map;
 import java.util.Random;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import apiEndPoints.ApiEndpoints;
 import baseAPI.StoreIDs;
+import pojo.DieticianData;
 import pojo.tokenManager;
 
 public class CreateDieticianLogic {
 	
 	static Response response;
+	
 	
 	public static Response createDietician(String sheetName, String testCaseId) {
 	    String token = tokenManager.getAdminToken();
@@ -41,7 +51,7 @@ public class CreateDieticianLogic {
 	            .header("Authorization", "Bearer " + token)
 	            .contentType("application/json")
 	            .body(requestBody.toString())
-	            .post("/dietician");
+	            .post(ApiEndpoints.CreateDietician.getResources());
 
 	    StoreIDs.storeCreatedDietician(response);
 	    StoreIDs.storeDieticianPassword(response);
@@ -49,7 +59,74 @@ public class CreateDieticianLogic {
 	    return response;
 	}
 
+
 	
+//	public static Response createDieticianThroughJSONData() {
+//        String filePath = ConfigReader.getProperty("JSON_Path");
+//        List<DieticianData> dieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+//        System.out.println("Using JSON file: " + filePath);
+//
+//        String token = tokenManager.getAdminToken();
+//
+//        for (DieticianData dietician : dieticians) {
+//            try {
+//                ObjectMapper mapper = new ObjectMapper();
+//                System.out.println("Sending request for dietician: " + mapper.writeValueAsString(dietician));
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//
+//            Response response = RestAssured
+//                .given()
+//                .header("Authorization", "Bearer " + token)
+//                .contentType("application/json")
+//                .body(dietician)
+//                .post(ApiEndpoints.CreateDietician.getResources());
+//
+//            System.out.println("Status Code: " + response.getStatusCode());
+//            System.out.println("Response Body:\n" + response.asPrettyString());
+//
+//            if (response.getStatusCode() != 201) {
+//                throw new RuntimeException("Failed to create dietician: " + dietician.getFirstname());
+//            }
+//        }
+//		return response;
+//    }
+
+	public static Response createDieticianThroughJSONData() {
+	    String filePath = ConfigReader.getProperty("JSON_Path");
+	    List<DieticianData> dieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+	    System.out.println("Using JSON file: " + filePath);
+
+	    String token = tokenManager.getAdminToken();
+
+	    Response lastResponse = null;
+
+	    for (DieticianData dietician : dieticians) {
+	        try {
+	            ObjectMapper mapper = new ObjectMapper();
+	            System.out.println("Sending request for dietician: " + mapper.writeValueAsString(dietician));
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+
+	        lastResponse = RestAssured
+	            .given()
+	            .header("Authorization", "Bearer " + token)
+	            .contentType("application/json")
+	            .body(dietician)
+	            .post(ApiEndpoints.CreateDietician.getResources());
+
+	        System.out.println("Status Code: " + lastResponse.getStatusCode());
+	        System.out.println("Response Body:\n" + lastResponse.asPrettyString());
+
+	        if (lastResponse.getStatusCode() != 201) {
+	            throw new RuntimeException("Failed to create dietician: " + dietician.getFirstname());
+	        }
+	    }
+	    return lastResponse;  // always assigned if list not empty
+	}
+
 
 	
 	public static Response createDieticianWithRandomlyGeneratedData() 
