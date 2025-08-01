@@ -23,5 +23,22 @@ public class jsonReader {
 	    }
 	    return list;
 	}
+	
+	public static class ScenarioContext {
+	    private static ThreadLocal<String> scenarioName = new ThreadLocal<>();
+
+	    public static void setScenarioName(String name) {
+	        scenarioName.set(name);
+	    }
+
+	    public static String getScenarioName() {
+	        return scenarioName.get();
+	    }
+
+	    public void clear() {
+	        scenarioName.remove();
+	    }
+	}
+
 
 }

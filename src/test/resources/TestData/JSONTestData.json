@@ -1,17 +1,28 @@
 [
   {
+    "Scenario": "CreateDietician_ValidAuth",
+    "Type": "Negative",
     "Firstname": "John",
     "Lastname": "Doe",
-    "Email": "john.doe24@example.com",
-    "ContactNumber": "9734767890",
+    "Email": "john.doe77@example.com",
+    "ContactNumber": "9347699890",
     "Education": "B.Sc Nutrition",
-    "DateOfBirth": "1997-05-10",
+    "DateOfBirth": "1967-01-10",
     "HospitalName": "City Hospital",
     "HospitalStreet": "Main St",
     "HospitalCity": "Springfield",
-    "HospitalPincode": "123456"
+    "HospitalPincode": "123456",
+    "authType": "Bearer",
+    "contentType":"application/json",
+    "expectedStatusCode": 201,
+    "expectedStatusLine": "Created",
+    "expectedContentType": "application/json"
   },
+    
   {
+    "Scenario": "CreateDietician_InvalidAuth",
+    "Name": "Create Dietician with No Auth",
+    "Type": "Negative",
     "Firstname": "Janeq",
     "Lastname": "Smithq",
     "Email": "jane.smith26@example.com",
@@ -21,6 +32,52 @@
     "HospitalName": "County Hospital",
     "HospitalStreet": "Second St",
     "HospitalCity": "Greenville",
-    "HospitalPincode": "654321"
+    "HospitalPincode": "654321",
+    "authType": "No Auth",
+    "contentType":"application/json",
+    "expectedStatusCode": 401,
+    "expectedStatusLine": "Unauthorized",
+    "expectedContentType": "application/json"
+  },
+  {
+    "Scenario": "Dietician bearer token",
+    "Name": "Create Dietician with Dietician Bearer Token",
+    "Type": "Negative",
+    "Firstname": "Janeq",
+    "Lastname": "Smithq",
+    "Email": "jane.smith26@example.com",
+    "ContactNumber": "0964654321",
+    "Education": "M.Sc Nutrition",
+    "DateOfBirth": "1986-10-15",
+    "HospitalName": "County Hospital",
+    "HospitalStreet": "Second St",
+    "HospitalCity": "Greenville",
+    "HospitalPincode": "654321",
+    "authType": "Bearer Token",
+    "contentType":"application/json",
+    "expectedStatusCode": 403,
+    "expectedStatusLine": "forbidden",
+    "expectedContentType": "application/json"
+  },
+  {
+    "Scenario": "Patient bearer token",
+    "Name": "Create Dietician with Patient Bearer Token",
+    "Type": "Negative",
+    "Firstname": "Janeq",
+    "Lastname": "Smithq",
+    "Email": "jane.smith26@example.com",
+    "ContactNumber": "0964654321",
+    "Education": "M.Sc Nutrition",
+    "DateOfBirth": "1986-10-15",
+    "HospitalName": "County Hospital",
+    "HospitalStreet": "Second St",
+    "HospitalCity": "Greenville",
+    "HospitalPincode": "654321",
+    "authType": "Bearer Token",
+    "contentType":"application/json",
+    "expectedStatusCode": 403,
+    "expectedStatusLine": "forbidden",
+    "expectedContentType": "application/json"
   }
+  
 ]
