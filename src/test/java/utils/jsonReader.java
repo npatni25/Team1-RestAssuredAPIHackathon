@@ -5,7 +5,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.InputStream;
 import java.util.List;
-
+import java.util.Map;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 public class jsonReader {
 
 	public static <T> List<T> readJsonList(String filePath, Class<T> clazz) {
@@ -24,4 +27,15 @@ public class jsonReader {
 	    return list;
 	}
 
+	public static String readJsonFileAsString(String filePath) {
+        try {
+            return new String(Files.readAllBytes(Paths.get(filePath)));
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read JSON file: " + filePath, e);
+        }
+	}
+
+   
+
 }
+

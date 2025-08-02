@@ -2,10 +2,10 @@
   {
     "Firstname": "John",
     "Lastname": "Doe",
-    "Email": "john.doe24@example.com",
-    "ContactNumber": "9734767890",
+    "Email": "bunny@example.com",
+    "ContactNumber": "7634767811",
     "Education": "B.Sc Nutrition",
-    "DateOfBirth": "1997-05-10",
+    "DateOfBirth": "1997-06-21",
     "HospitalName": "City Hospital",
     "HospitalStreet": "Main St",
     "HospitalCity": "Springfield",
@@ -14,13 +14,32 @@
   {
     "Firstname": "Janeq",
     "Lastname": "Smithq",
-    "Email": "jane.smith26@example.com",
-    "ContactNumber": "0964654321",
+    "Email": "smitha@example.com",
+    "ContactNumber": "9964654321",
     "Education": "M.Sc Nutrition",
-    "DateOfBirth": "1986-10-15",
+    "DateOfBirth": "1986-10-20",
     "HospitalName": "County Hospital",
     "HospitalStreet": "Second St",
     "HospitalCity": "Greenville",
     "HospitalPincode": "654321"
-  }
+  },
+  
+  {
+	
+    "FirstName": "John",
+    "LastName": "Doe",
+    "ContactNumber": "1234567890",
+    "Email": "john.doe@example.com",
+    "DateOfBirth": "1990-01-01",
+    "Allergy": "soy",
+    "FoodPreference": "Vegetarian",
+    "CuisineCategory": "Asian"
+     
+   }
+  
+
+
+
+
+  
 ]

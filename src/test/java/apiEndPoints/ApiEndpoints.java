@@ -7,7 +7,8 @@ public enum ApiEndpoints {
 		APILogoutGet("/logoutdietician"),
 		CreateDietician("/dietician"),
 	    GetAllMorbidities ("/morbidity"),
-	    GetMorbidityByTestname("/morbidity/{morbidityName}");
+	    GetMorbidityByTestname("/morbidity/{morbidityName}"),
+	    CreatePatientPost("/patient");
 	
 	
 	private String resources;

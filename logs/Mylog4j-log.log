@@ -1,0 +1,15 @@
+[INFO ] 2025-08-01 20:51:51.671 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
+[INFO ] 2025-08-01 20:52:53.444 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
+[INFO ] 2025-08-01 21:04:07.289 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
+[INFO ] 2025-08-01 21:08:47.242 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
+[INFO ] 2025-08-01 21:08:47.358 [main] LoggerLoad - Create Patient Response: 
+{
+    "timestamp": "2025-08-02T01:08:47.567366754",
+    "status": 415,
+    "error": "Unsupported Media Type",
+    "message": "An unexpected error occurred."
+}
+[INFO ] 2025-08-01 21:12:37.024 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
+[INFO ] 2025-08-01 21:15:15.111 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
+[INFO ] 2025-08-01 21:18:31.566 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
+[INFO ] 2025-08-01 21:22:29.068 [main] LoggerLoad - Reading patient request data from: src/test/resources/TestData/PatientData.json
