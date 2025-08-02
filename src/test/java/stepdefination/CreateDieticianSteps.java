@@ -28,26 +28,6 @@ public class CreateDieticianSteps {
 		BaseAPI.storeAdminToken();
 	}
 
-//	@When("post condition with valid data from sheet {string} with test case no {string} is provided")
-//	public void post_condition_with_valid_data_from_sheet_with_test_case_no_is_provided(String sheetName,
-//			String testCaseId) {
-//
-//		this.sheet = sheet;
-//		this.testCaseId = testCaseId;
-//		// response = CreateDieticianLogic.createDieticianExcel(sheetName, testCaseId); // To
-//		// create dietician by reading data from excel file
-//		// response = CreateDieticianLogic.createDieticianWithRandomlyGeneratedData();
-//		// //To create dietician with randomly generated data through code
-//		response = CreateDieticianLogic.createDieticianThroughJSONData();
-//		StoreIDs.storeCreatedDietician(response);
-//		StoreIDs.storeDieticianEmailAsUserName(response);
-//		StoreIDs.storeDieticianPassword(response);
-//
-//		List<String> ids = StoreIDs.getAllIds();
-//		System.out.println("All IDs: " + ids);
-//
-//	}
-
 	@Given("User is creating dietician {string}")
 	public void user_is_creating_dietician(String scenarioName) {
 		jsonReader.ScenarioContext.setScenarioName(scenarioName);
@@ -211,8 +191,8 @@ public class CreateDieticianSteps {
 		System.out.println("Response is" +response.asPrettyString());
 	}
 	
-	@When("Retrieving all dietician with valid Auth")
-	public void retrieving_all_dietician_with_valid_auth() {
+	@When("Retrieving all dietician reading from JSON data file")
+	public void retrieving_all_dietician_reading_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
 		response = CreateDieticianLogic.getAllDieticianJSON(scenarioName);
 		System.out.println("Response is: " + response.asPrettyString());
@@ -225,7 +205,29 @@ public class CreateDieticianSteps {
 	}
 //////////////////////////--------Retrieve Dietician by ID---------/////////////////////////////////////////////////////////////////	
 	
+	@Given("Dietician already created")
+	public void dietician_already_created() {
+		response = CreateDieticianLogic.createDieticianWithRandomlyGeneratedData();
+		StoreIDs.storeCreatedDietician(response);
+		StoreIDs.storeDieticianEmailAsUserName(response);
+		StoreIDs.storeDieticianPassword(response);
+		List<String> ids = StoreIDs.getAllIds();
+		System.out.println("All IDs: " + ids); 
+	}
 	
+	@When("Retrieving dietician by ID reading from JSON data file")
+	public void retrieving_dietician_by_id_reading_from_json_data_file() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.getDieticianById(scenarioName);
+		System.out.println("Response is: " + response.asPrettyString());
+	}
+	
+	@When("Retrieving dietician by ID reading invalid ID from JSON data file")
+	public void retrieving_dietician_by_id_reading_invalid_id_from_json_data_file() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.getDieticianByInvaliId(scenarioName);
+		System.out.println("Response is: " + response.asPrettyString()); 
+	}
 	
 	
 	

@@ -60,6 +60,8 @@ public class DieticianData {
     @JsonProperty("endpoint")
     private String endpoint;
     
+    @JsonProperty("invalidID")
+    private String invalidID;
 
     // Getters and Setters
     public String getContactNumber() { return ContactNumber; }
@@ -112,6 +114,9 @@ public class DieticianData {
     
     public String getEndPoint() { return endpoint; }
     public void setEndPoint(String endpoint) { this.endpoint = endpoint; }
+    
+    public String getInvalidID() { return invalidID; }
+    public void setInvalidID(String invalidID) { this.invalidID = invalidID; }
 
 }
 
