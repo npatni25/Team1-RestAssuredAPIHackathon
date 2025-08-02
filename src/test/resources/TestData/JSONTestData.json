@@ -4,10 +4,10 @@
     "Type": "Positive",
     "Firstname": "John",
     "Lastname": "Doe",
-    "Email": "john.doe77@example.com",
-    "ContactNumber": "9347699890",
+    "Email": "john.doe79@example.com",
+    "ContactNumber": "9397699890",
     "Education": "B.Sc Nutrition",
-    "DateOfBirth": "1967-01-10",
+    "DateOfBirth": "1969-01-10",
     "HospitalName": "City Hospital",
     "HospitalStreet": "Main St",
     "HospitalCity": "Springfield",
@@ -213,11 +213,21 @@
     "expectedStatusLine": "Unauthorized"
   },
   {
-    "Scenario": "RetrieveDietician_InvaliMethod",
+    "Scenario": "RetrieveDietician_InvaliMethod_PUT",
     "Type": "Negative",
     "authType": "Bearer ",
     "contentType":"application/json",
     "method":"PUT",
+    "endpoint":"/dietician",
+    "expectedStatusCode": 405,
+    "expectedStatusLine": "Method Not Allowed"
+  },
+  {
+    "Scenario": "RetrieveDietician_InvaliMethod_POST",
+    "Type": "Negative",
+    "authType": "Bearer ",
+    "contentType":"application/json",
+    "method":"POST",
     "endpoint":"/dietician",
     "expectedStatusCode": 405,
     "expectedStatusLine": "Method Not Allowed"
@@ -229,8 +239,19 @@
     "contentType":"application/json",
     "method":"GET",
     "endpoint":"/diet",
-    "expectedStatusCode": 405,
-    "expectedStatusLine": "Method Not Allowed"
+    "expectedStatusCode": 404,
+    "expectedStatusLine": "Not Found"
+  },
+  {
+    "Scenario": "RetrieveDietician_InvaliDieticianID",
+    "Type": "Negative",
+    "authType": "Bearer ",
+    "contentType":"application/json",
+    "method":"GET",
+    "endpoint":"/dietician",
+    "expectedStatusCode": 404,
+    "expectedStatusLine": "Not Found",
+    "invalidID":"1111111"
   }
   
 ]

@@ -8,10 +8,8 @@ import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 
 import utils.ConfigReader;
-import utils.ExcelReader;
 import utils.jsonReader;
 
-import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
 import java.text.SimpleDateFormat;
@@ -19,11 +17,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
-import java.io.File; 
 import org.json.JSONObject;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import apiEndPoints.ApiEndpoints;
@@ -34,34 +29,6 @@ import pojo.tokenManager;
 public class CreateDieticianLogic {
 
 	static Response response;
-
-	/////////////////////////////Positive - Create Dietician with valid data reading from Excel data file//////////////////////////	
-
-	//	public static Response createDieticianExcel(String sheetName, String testCaseId) {
-	//		String token = tokenManager.getAdminToken();
-	//
-	//		Map<String, String> rowData = ExcelReader.getTestDataByTestCaseId(sheetName, testCaseId);
-	//
-	//		JSONObject requestBody = new JSONObject();
-	//		requestBody.put("Firstname", rowData.get("Firstname"));
-	//		requestBody.put("Lastname", rowData.get("Lastname"));
-	//		requestBody.put("Email", rowData.get("Email"));
-	//		requestBody.put("ContactNumber", rowData.get("ContactNumber"));
-	//		requestBody.put("DateOfBirth", rowData.get("DateOfBirth"));
-	//		requestBody.put("Education", rowData.get("Education"));
-	//		requestBody.put("HospitalCity", rowData.get("HospitalCity"));
-	//		requestBody.put("HospitalName", rowData.get("HospitalName"));
-	//		requestBody.put("HospitalPincode", rowData.get("HospitalPincode"));
-	//		requestBody.put("HospitalStreet", rowData.get("HospitalStreet"));
-	//
-	//		Response response = given().header("Authorization", "Bearer " + token).contentType("application/json")
-	//				.body(requestBody.toString()).post(ApiEndpoints.CreateDietician.getResources());
-	//
-	//		StoreIDs.storeCreatedDietician(response);
-	//		StoreIDs.storeDieticianPassword(response);
-	//		StoreIDs.storeDieticianEmailAsUserName(response);
-	//		return response;
-	//	}
 
 /////////////////////////////Positive - Create Dietician with valid data reading from JSON data file//////////////////////////	
 	public static Response createDieticianThroughJSONData1(String scenarioName) {
@@ -436,7 +403,7 @@ public class CreateDieticianLogic {
 	    			.get("/dietician");
 	    	return response;
 	    }
-	////////////////////Retrieving dietician/////////////////////////////////////////// 
+	////////////////////-----Retrieving All dietician--------/////////////////////////////////////////// 
 	    public static Response getAllDieticianJSON(String scenarioName) {
 	        String filePath = ConfigReader.getProperty("JSON_Path");
 	        String admintoken = tokenManager.getAdminToken();
@@ -480,10 +447,124 @@ public class CreateDieticianLogic {
 
 	        return response;
 	    }
+////////////////////-----Retrieving dietician By Valid ID--------///////////////////////////////////////////  
+	
+	    public static Response getDieticianById(String scenarioName) {
+	        String dieticianId = StoreIDs.getLatestStoredDieticianID();
+	        String filePath = ConfigReader.getProperty("JSON_Path");
+	        String admintoken = tokenManager.getAdminToken(); 
 
-	
-	
-	
+	        if (dieticianId == null || dieticianId.isEmpty()) {
+	            throw new RuntimeException("No stored dietician ID found");
+	        }
+
+	        List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+	        Optional<DieticianData> matchedDietician = allDieticians.stream()
+	            .filter(d -> scenarioName.equalsIgnoreCase(d.getScenario()))
+	            .findFirst();
+
+	        if (!matchedDietician.isPresent()) {
+	            throw new RuntimeException("Scenario not found in JSON: " + scenarioName);
+	        }
+
+	        DieticianData dietician = matchedDietician.get();
+	        String method = dietician.getMethod();
+	        String endpoint = dietician.getEndPoint(); 
+	        String auth = dietician.getauthType();
+	        String baseUrl = ConfigReader.getProperty("baseUrl");
+
+	        // Build full endpoint with ID
+	        String fullPath = endpoint.endsWith("/") ? endpoint + dieticianId : endpoint + "/" + dieticianId;
+
+	        System.out.println("Method: " + method);
+	        System.out.println("Full Path: " + fullPath);
+
+	        RequestSpecification request = given()
+	                .baseUri(baseUrl)
+	                .basePath(fullPath)
+	                .header("Authorization", auth + admintoken)
+	                .contentType(dietician.getContentType());
+
+	        Response response;
+
+	        switch (method.toUpperCase()) {
+	            case "GET":
+	                response = request.get(); 
+	                break;
+	            case "POST":
+	                response = request.body(dietician).post();
+	                break;
+	            case "PUT":
+	                response = request.body(dietician).put();
+	                break;
+	            case "DELETE":
+	                response = request.delete();
+	                break;
+	            default:
+	                throw new IllegalArgumentException("Unsupported HTTP method: " + method);
+	        }
+
+	        System.out.println("Dietician by ID response:\n" + response.asPrettyString());
+	        return response;
+	    }
+
+////////////////////-----Retrieving dietician By Valid ID--------///////////////////////////////////////////  
+	    public static Response getDieticianByInvaliId(String scenarioName) {
+	        String filePath = ConfigReader.getProperty("JSON_Path");
+	        String baseUrl = ConfigReader.getProperty("baseUrl");
+	        String adminToken = tokenManager.getAdminToken();
+       List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+
+	            Optional<DieticianData> matched = allDieticians.stream()
+	            .filter(d -> scenarioName.equalsIgnoreCase(d.getScenario()))
+	            .findFirst();
+
+	        if (!matched.isPresent()) {
+	            throw new RuntimeException("No data found in JSON for scenario: " + scenarioName);
+	        }
+	        DieticianData dietician = matched.get();
+	        String method = dietician.getMethod();
+	        String endpoint = dietician.getEndPoint();
+	        String invalidId = dietician.getInvalidID(); 
+	        String auth = dietician.getauthType();
+
+	        if (invalidId == null || invalidId.trim().isEmpty() || "null".equalsIgnoreCase(invalidId)) {
+	            throw new RuntimeException("Invalid ID is missing or not set correctly in JSON.");
+	        }
+
+	        String fullPath = endpoint.endsWith("/") ? endpoint + invalidId : endpoint + "/" + invalidId;
+
+	        System.out.println("Final URL: " + baseUrl + fullPath);
+	        System.out.println("Method: " + method);
+
+	        RequestSpecification request = given()
+	            .baseUri(baseUrl)
+	            .header("Authorization", auth + adminToken)
+	            .contentType(dietician.getContentType());
+
+	        Response response;
+
+	        switch (method.toUpperCase()) {
+	            case "GET":
+	                response = request.get(fullPath);
+	                break;
+	            case "POST":
+	                response = request.body(dietician).post(fullPath);
+	                break;
+	            case "PUT":
+	                response = request.body(dietician).put(fullPath);
+	                break;
+	            case "DELETE":
+	                response = request.delete(fullPath);
+	                break;
+	            default:
+	                throw new IllegalArgumentException("Unsupported HTTP method: " + method);
+	        }
+
+	        System.out.println("Response:\n" + response.asPrettyString());
+	        return response;
+	    }
+
 	
 	
 	
