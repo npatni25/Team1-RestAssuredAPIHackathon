@@ -1,7 +1,9 @@
 package apiRequests;
 
 import io.restassured.RestAssured;
+import io.restassured.http.Method;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 
@@ -10,6 +12,7 @@ import utils.ExcelReader;
 import utils.jsonReader;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.Random;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,9 +20,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
-
+import java.io.File; 
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import apiEndPoints.ApiEndpoints;
@@ -300,8 +304,187 @@ public class CreateDieticianLogic {
 
 		return lastResponse;
 	}
+///////////////createDietician with InvalidAPIReq_PUT/////////////////////////////////////////////
+	public static Response createDietician_InvalidAPIReq_PUT(String scenarioName) {
+		String filePath = ConfigReader.getProperty("JSON_Path");
+		String admintoken = tokenManager.getAdminToken();
+		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
 
+		List<DieticianData> filteredDieticians = new ArrayList<>();
+		for (DieticianData d : allDieticians) {
+			if (scenarioName.equalsIgnoreCase(d.getScenario())) {
+				filteredDieticians.add(d);
+			}}
+		if (filteredDieticians.isEmpty()) {
+			throw new RuntimeException("No data found for scenario: " + scenarioName);
+		}
+		Response lastResponse = null;
+		for (DieticianData dietician : filteredDieticians) {
+			try {
+				ObjectMapper mapper = new ObjectMapper();
+				System.out.println("Sending request for dietician: " + mapper.writeValueAsString(dietician));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			lastResponse = RestAssured
+					.given()
+					.header("Authorization", "Bearer " + admintoken)
+					.contentType(dietician.getContentType()).body(dietician)
+					.put(ApiEndpoints.CreateDietician.getResources());
+			
+			System.out.println("Status Code: " + lastResponse.getStatusCode());
+			System.out.println("Response Body:\n" + lastResponse.asPrettyString());
+			System.out.println(" ****Found " + filteredDieticians.size() + " set(s) of data for scenario: " + scenarioName);
 
+			int expectedCode = dietician.getExpectedStatusCode();
+			if (lastResponse.getStatusCode() != expectedCode) {
+				throw new RuntimeException("Status code is not matching...Instead of " +expectedCode+ " it's showing as " +lastResponse.getStatusCode());
+			}}
+		return lastResponse;
+	}
+///////////////createDietician with valid data but Invalid EndPoint/////////////////////////////////////////////
+	public static Response createDietician_InvalidEndPoint(String scenarioName) {
+		String filePath = ConfigReader.getProperty("JSON_Path");
+		String admintoken = tokenManager.getAdminToken();
+		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
 
+		List<DieticianData> filteredDieticians = new ArrayList<>();
+		for (DieticianData d : allDieticians) {
+			if (scenarioName.equalsIgnoreCase(d.getScenario())) {
+				filteredDieticians.add(d);
+			}}
+		if (filteredDieticians.isEmpty()) {
+			throw new RuntimeException("No data found for scenario: " + scenarioName);
+		}
+		Response lastResponse = null;
+		for (DieticianData dietician : filteredDieticians) {
+			try {
+				ObjectMapper mapper = new ObjectMapper();
+				System.out.println("Sending request for dietician: " + mapper.writeValueAsString(dietician));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			lastResponse = RestAssured
+					.given()
+					.header("Authorization", "Bearer " + admintoken)
+					.contentType(dietician.getContentType()).body(dietician)
+					.post(ApiEndpoints.InvalidDieticianEndPoint.getResources());
+			
+			System.out.println("Status Code: " + lastResponse.getStatusCode());
+			System.out.println("Response Body:\n" + lastResponse.asPrettyString());
+			System.out.println(" ****Found " + filteredDieticians.size() + " set(s) of data for scenario: " + scenarioName);
 
+			int expectedCode = dietician.getExpectedStatusCode();
+			if (lastResponse.getStatusCode() != expectedCode) {
+				throw new RuntimeException("Status code is not matching...Instead of " +expectedCode+ " it's showing as " +lastResponse.getStatusCode());
+			}}
+		return lastResponse;
+	}	
+///////////////---------------End of createDietician  - Start of Get Dietician---------------------- /////////////////////////////////////////////
+
+	
+	
+	    public static Response RetrieveDietician_NoAuth(String scenarioName) {
+	    	String filePath = ConfigReader.getProperty("JSON_Path");
+			String admintoken = tokenManager.getAdminToken();
+			List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+
+			List<DieticianData> filteredDieticians = new ArrayList<>();
+			for (DieticianData d : allDieticians) {
+				if (scenarioName.equalsIgnoreCase(d.getScenario())) {
+					filteredDieticians.add(d);
+				}}
+			if (filteredDieticians.isEmpty()) {
+				throw new RuntimeException("No data found for scenario: " + scenarioName);
+			}
+			Response lastResponse = null;
+			for (DieticianData dietician : filteredDieticians) {
+				try {
+					ObjectMapper mapper = new ObjectMapper();
+					System.out.println("Sending request for dietician: " + mapper.writeValueAsString(dietician));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				RequestSpecification request = RestAssured
+						.given()
+						.header("Authorization", "Bearer " + admintoken)
+						.contentType(dietician.getContentType());
+				
+				 lastResponse = request.request(
+	                        Method.valueOf(dietician.getMethod().toUpperCase()),
+	                        dietician.getEndPoint()
+	                );
+				
+				System.out.println("Status Code: " + lastResponse.getStatusCode());
+				System.out.println("Response Body:\n" + lastResponse.asPrettyString());
+				System.out.println(" ****Found " + filteredDieticians.size() + " set(s) of data for scenario: " + scenarioName);
+
+				int expectedCode = dietician.getExpectedStatusCode();
+				if (lastResponse.getStatusCode() != expectedCode) {
+					throw new RuntimeException("Status code is not matching...Instead of " +expectedCode+ " it's showing as " +lastResponse.getStatusCode());
+				}}
+			return lastResponse;
+	}
+	  ////////////////////Getting all dietician all hard coded
+	    public static Response getAllDietician() 
+	    {
+	    	String admintoken = tokenManager.getAdminToken();
+	    	Response response = given()
+	    			.header("Authorization", "Bearer " + admintoken)
+	    			.contentType("application/json")
+	    			.baseUri("https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician")
+	    			.get("/dietician");
+	    	return response;
+	    }
+	////////////////////Retrieving dietician/////////////////////////////////////////// 
+	    public static Response getAllDieticianJSON(String scenarioName) {
+	        String filePath = ConfigReader.getProperty("JSON_Path");
+	        String admintoken = tokenManager.getAdminToken();
+
+	        List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+
+	        Optional<DieticianData> matchedDietician = allDieticians.stream()
+	            .filter(d -> scenarioName.equalsIgnoreCase(d.getScenario()))
+	            .findFirst();
+
+	        DieticianData dietician = matchedDietician.get();
+	        String method = dietician.getMethod();
+	        String endpoint = dietician.getEndPoint();
+	        String auth = dietician.getauthType();
+	        
+	        System.out.println("Method: " + dietician.getMethod());
+	        System.out.println("Endpoint: " + dietician.getEndPoint());
+	        
+	        RequestSpecification request = given()
+	            .baseUri(ConfigReader.getProperty("baseUrl"))
+	            .contentType(dietician.getContentType())
+	            .header("Authorization", auth +admintoken);
+
+	        Response response = null;
+	        switch (method.toUpperCase()) {
+	            case "GET":
+	                response = request.get(endpoint);
+	                break;
+	            case "POST":
+	                response = request.body(dietician).post(endpoint);
+	                break;
+	            case "PUT":
+	                response = request.body(dietician).put(endpoint);
+	                break;
+	            case "DELETE":
+	                response = request.delete(endpoint);
+	                break;
+	            default:
+	                throw new IllegalArgumentException("Unsupported HTTP method: " + method);
+	        }
+
+	        return response;
+	    }
+
+	
+	
+	
+	
+	
+	
 }
