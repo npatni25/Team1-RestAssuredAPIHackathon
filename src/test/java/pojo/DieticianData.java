@@ -53,7 +53,12 @@ public class DieticianData {
     
     @JsonProperty("expectedStatusCode")
     private int expectedStatusCode;
-
+    
+    @JsonProperty("method")
+    private String method;
+    
+    @JsonProperty("endpoint")
+    private String endpoint;
     
 
     // Getters and Setters
@@ -101,6 +106,12 @@ public class DieticianData {
     
     public int getExpectedStatusCode() { return expectedStatusCode; }
     public void setExpectedStatusCode(int expectedStatusCode) { this.expectedStatusCode = expectedStatusCode; }
+    
+    public String getMethod() { return method; }
+    public void setMethod(String method) { this.method = method; }
+    
+    public String getEndPoint() { return endpoint; }
+    public void setEndPoint(String endpoint) { this.endpoint = endpoint; }
 
 }
 

@@ -130,5 +130,116 @@ public class CreateDieticianSteps {
 		System.out.println("!!!!!!!!!!!!!!!sttaus code for patient bearer" + ActualstatusCode);
 		Assert.assertEquals(ActualstatusCode, expectedStatusCode, "Expected 403 forbidden but got " + ActualstatusCode);
 	}
+	
+	@When("Post condition to create dietician with invalid data from json data file")
+	public void post_condition_to_create_dietician_with_invalid_data_from_json_data_file() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.createDieticianThroughJSONData1(scenarioName);
+	}
 
+	@Then("User should see Admin recieves {int} Bad Request error")
+	public void user_should_see_admin_recieves_bad_request_error(Integer expectedStatusCode) {
+		Assert.assertNotNull(response, "Response is blank");
+		int ActualstatusCode = response.getStatusCode();
+		Assert.assertEquals(ActualstatusCode, expectedStatusCode, "Expected 400 forbidden but got " + ActualstatusCode); 
+	}
+	
+	@When("Post condition to create dietician with invalid PinCode from json data file")
+	public void post_condition_to_create_dietician_with_invalid_pin_code_from_json_data_file() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.createDieticianThroughJSONData1(scenarioName);
+	}
+
+	@Then("User should see Admin recieves {string} error")
+	public void user_should_see_admin_recieves_error(String expectedError) {
+		Assert.assertNotNull(response, "Response is blank");
+		boolean ActualError = response.asString().contains(expectedError);
+		Assert.assertEquals(ActualError, true);
+	}
+	
+	@Then("User should see Admin recieves same cont & dob error {string} error")
+	public void user_should_see_admin_recieves_same_cont_dob_error_error(String expectedError) {
+		Assert.assertNotNull(response, "Response is blank");
+		boolean ActualError = response.asString().contains(expectedError);
+		Assert.assertEquals(ActualError, true);
+	}
+	
+	@When("Post condition to create dietician with invalid API request")
+	public void post_condition_to_create_dietician_with_invalid_api_request() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.createDietician_InvalidAPIReq_PUT(scenarioName);
+	}
+
+	@Then("User should see Admin recieves {int} Method Not Allowed error")
+	public void user_should_see_admin_recieves_method_not_allowed_error(Integer expectedStatusCode) {
+		Assert.assertNotNull(response, "Response is blank");
+		int ActualstatusCode = response.getStatusCode();
+		Assert.assertEquals(ActualstatusCode, expectedStatusCode, "Expected 405 but got " + ActualstatusCode); 
+	}
+	
+	@When("Post condition to create dietician with invalid End Point")
+	public void post_condition_to_create_dietician_with_invalid_end_point() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.createDietician_InvalidEndPoint(scenarioName);
+	}
+
+	@Then("User should see Admin recieves {int} Not Found error")
+	public void user_should_see_admin_recieves_not_found_error(Integer expectedStatusCode) {
+		Assert.assertNotNull(response, "Response is blank");
+		int ActualstatusCode = response.getStatusCode();
+		Assert.assertEquals(ActualstatusCode, expectedStatusCode, "Expected 404 but got " + ActualstatusCode);
+	}
+	
+	@Then("User should see Admin recieves {int} unsupported media type error")
+	public void user_should_see_admin_recieves_unsupported_media_type_error(Integer expectedStatusCode) {
+		Assert.assertNotNull(response, "Response is blank");
+		int ActualstatusCode = response.getStatusCode();
+		Assert.assertEquals(ActualstatusCode, expectedStatusCode, "Expected 415 but got " + ActualstatusCode);
+	}
+//////////////////////////--------Retrieve All Dietician---------/////////////////////////////////////////////////////////////////
+
+	@When("Retrieving all dietician with no Auth {string}")
+	public void retrieving_all_dietician_with_no_auth(String scenarioName) {
+		
+		response = CreateDieticianLogic.getAllDietician();
+		System.out.println("Response is" +response.asPrettyString());		
+	}
+
+	@When("Retrieving all dietician")
+	public void retrieving_all_dietician() {
+		response = CreateDieticianLogic.getAllDietician();
+		System.out.println("Response is" +response.asPrettyString());
+	}
+	
+	@When("Retrieving all dietician with valid Auth")
+	public void retrieving_all_dietician_with_valid_auth() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.getAllDieticianJSON(scenarioName);
+		System.out.println("Response is: " + response.asPrettyString());
+	}
+
+	@Then("User should see Admin recieves {int}")
+	public void user_should_see_admin_recieves(Integer expectedStatusCode) {
+		Assert.assertNotNull(response, "Response is blank");
+		Assert.assertEquals(response.getStatusCode(), expectedStatusCode.intValue());
+	}
+//////////////////////////--------Retrieve Dietician by ID---------/////////////////////////////////////////////////////////////////	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
