@@ -1,0 +1,26 @@
+ [
+	{
+	   "scenario": "Check dietician able to create patient with valid data and token",
+	   "name": "",
+	   "type": "Negative",
+	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+	   "contentType":"multipart/form-data",
+	   "expectedStatusCode": 201,
+	   "expectedStatusLine": "Created",
+	   "expectedContentType": "application/json",
+	   
+	   "FirstName": "LN",
+	   "LastName": "FN",
+	   "ContactNumber": "1339935890",
+	   "Email": "sfzsapf@atc.com",
+	   "Allergy": "ALMOND",
+	   "FoodPreference": "Vegan",
+	   "CuisineCategory":"Indian",
+	   "DateOfBirth": "1985-02-14",
+	   
+	   "Weight": 175.6,
+	   "Height": 5.11,
+	   "Temperature": 175.6
+
+	 }
+]

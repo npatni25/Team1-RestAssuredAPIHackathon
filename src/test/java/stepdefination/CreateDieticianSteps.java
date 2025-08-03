@@ -11,6 +11,8 @@ import apiRequests.CreateDieticianLogic;
 import baseAPI.BaseAPI;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
+import login.UserLoginManager;
+import pojo.UserLoginInfo;
 import baseAPI.StoreIDs;
 import utils.ExcelReader;
 
@@ -43,6 +45,15 @@ public class CreateDieticianSteps {
 	    
 	    List<String> ids = StoreIDs.getAllIds();
 	    System.out.println("All IDs: " + ids);
+	    
+	    //Storing Ditiecian credentials in UserLoginManager
+	    String dieticianUsername = response.jsonPath().getString("Email");
+		String dieticianPassword = response.jsonPath().getString("loginPassword");
+		if (dieticianUsername != null && !dieticianUsername.isEmpty() && dieticianPassword != null
+				&& !dieticianPassword.isEmpty()) {
+			UserLoginInfo dieticianLoginInfo = new UserLoginInfo(dieticianUsername, dieticianPassword);
+			UserLoginManager.addUserForScenario("VALID_DIETICIAN", dieticianLoginInfo);
+		}
 	
 	}
 

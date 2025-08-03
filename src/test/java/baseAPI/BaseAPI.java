@@ -29,6 +29,17 @@ public class BaseAPI {
 		
 	}
 	
+	public static Response userLogin(String username, String password)
+	{
+        RequestSpecification request = RestAssured
+				.given()
+				.header("content-type","application/json")
+				.body("{\"userLoginEmail\":\"" + username + "\",\"password\":\"" + password + "\"}");
+		
+        return request.post(ApiEndpoints.APILoginPost.getResources());
+		
+	}
+	
 	public static String  storeAdminToken()
 	{
 		Response response = adminLogin();
