@@ -87,6 +87,7 @@ public class StoreIDs {
         }
 		return dieticianUsername;
     }
+
     
     public static void storeDieticianToken(Response response) {
     String dieticianToken = response.jsonPath().getString("token");
@@ -106,7 +107,14 @@ public class StoreIDs {
     }
 
 	
-	
+ public static String getLatestStoredDieticianID()
+    {
+    	 if (!ids.isEmpty()) {
+    	        return ids.get(ids.size() - 1);
+    	    }
+    	    return null;
+    }
+
 
 }
 

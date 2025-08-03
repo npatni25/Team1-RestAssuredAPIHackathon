@@ -40,6 +40,28 @@ public class DieticianData {
     // Optional field
     @JsonProperty("TestCaseId")
     private String TestCaseId;
+    
+    @JsonProperty("authType")
+    private String authType;
+    
+    @JsonProperty("contentType")
+    private String contentType;
+    
+
+    @JsonProperty("Scenario")
+    private String scenario;
+    
+    @JsonProperty("expectedStatusCode")
+    private int expectedStatusCode;
+    
+    @JsonProperty("method")
+    private String method;
+    
+    @JsonProperty("endpoint")
+    private String endpoint;
+    
+    @JsonProperty("invalidID")
+    private String invalidID;
 
     // Getters and Setters
     public String getContactNumber() { return ContactNumber; }
@@ -74,6 +96,28 @@ public class DieticianData {
 
     public String getTestCaseId() { return TestCaseId; }
     public void setTestCaseId(String testCaseId) { TestCaseId = testCaseId; }
+    
+    public String getauthType() { return authType; }
+    public void setauthType(String authType) { this.authType = authType; }
+    
+    public String getContentType() { return contentType; } 
+    public void setContentType(String contentType) { this.contentType = contentType; } 
+  
+    public String getScenario() { return scenario; }
+    public void setScenario(String scenario) { this.scenario = scenario; }
+    
+    public int getExpectedStatusCode() { return expectedStatusCode; }
+    public void setExpectedStatusCode(int expectedStatusCode) { this.expectedStatusCode = expectedStatusCode; }
+    
+    public String getMethod() { return method; }
+    public void setMethod(String method) { this.method = method; }
+    
+    public String getEndPoint() { return endpoint; }
+    public void setEndPoint(String endpoint) { this.endpoint = endpoint; }
+    
+    public String getInvalidID() { return invalidID; }
+    public void setInvalidID(String invalidID) { this.invalidID = invalidID; }
+
 }
 
 

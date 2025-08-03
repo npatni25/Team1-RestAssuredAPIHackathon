@@ -5,17 +5,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
 
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.14.0</version>
-</dependency>
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-testng</artifactId>
-    <version>7.18.1</version>
+    <version>7.27.0</version>
 </dependency>
 	
 	<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
@@ -62,6 +57,14 @@
     <scope>test</scope>
 </dependency>
 
+
+<!-- Cucumber with TestNG -->
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.27.0</version>
+</dependency>
 
 <!-- https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest -->
 <dependency>
