@@ -115,16 +115,6 @@
     <version>2.0.13</version> <!-- or latest -->
 </dependency>
 
-  	<dependency>
-  		<groupId>Automation_framework</groupId>
-  		<artifactId>selenium_framework</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>CucumberBDD_proj</groupId>
-  		<artifactId>CucumberBDD_proj</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   	
   	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 	<dependency>
