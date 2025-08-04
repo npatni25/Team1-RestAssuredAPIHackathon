@@ -3,18 +3,17 @@ package stepdefination;
 import static org.testng.Assert.assertEquals;
 
 import java.util.List;
-import java.util.Map;
 
 import org.testng.Assert;
 
-import apiRequests.CreateDieticianLogic;
 import baseAPI.BaseAPI;
-import io.cucumber.java.en.*;
+import baseAPI.StoreIDs;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import login.UserLoginManager;
 import pojo.UserLoginInfo;
-import baseAPI.StoreIDs;
-import utils.ExcelReader;
 
 public class CreateDieticianSteps {
 	
@@ -23,6 +22,7 @@ public class CreateDieticianSteps {
     private String testCaseId;
 	
 	
+	@SuppressWarnings("unused")
 	@Given("Admin user loggedin")
 	public void admin_user_loggedin() {
 		Response response = BaseAPI.adminLogin();

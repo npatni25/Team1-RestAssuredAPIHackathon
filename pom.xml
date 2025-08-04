@@ -35,6 +35,14 @@
     <version>5.5.5</version>
 </dependency>
 
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version> <!-- Make sure it's JUnit 4.x -->
+    <scope>test</scope>
+</dependency>
+
+
 <!-- for JSONObject -->
 <dependency>
     <groupId>org.json</groupId>
@@ -63,6 +71,24 @@
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
     <version>7.27.0</version>
+
+
+</dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>5.3.30</version> <!-- or latest compatible version -->
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.27.0</version>
+    <scope>test</scope>
+
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest -->
@@ -151,6 +177,7 @@
   <artifactId>jackson-annotations</artifactId>
   <version>2.15.2</version>
 </dependency>
+
 <dependency>
     <groupId>commons-beanutils</groupId>
     <artifactId>commons-beanutils</artifactId>
@@ -161,6 +188,10 @@
   <artifactId>lombok</artifactId>
   <version>1.18.30</version> <!-- or latest -->
   <scope>provided</scope>
+
+
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
+
 </dependency>
 
   </dependencies> 

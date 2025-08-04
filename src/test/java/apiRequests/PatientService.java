@@ -6,12 +6,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.beanutils.BeanUtils;
 import org.testng.Assert;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import apiEndPoints.ApiEndpoints;
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.util.BeanUtil;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
@@ -115,7 +115,7 @@ public class PatientService {
 		}
 		try {
 			PatientInfo patientInfo = new PatientInfo();
-			BeanUtils.copyProperties(patientInfo, patientTestData);
+			org.apache.groovy.util.BeanUtils.copyProperties(patientInfo, patientTestData);
 
 			ObjectMapper mapper = new ObjectMapper();
 			patientTestDataAsString = mapper.writeValueAsString(patientInfo);
@@ -135,7 +135,7 @@ public class PatientService {
 		}
 		try {
 			PatientVitalsInfo vitalsInfo = new PatientVitalsInfo();
-			BeanUtils.copyProperties(vitalsInfo, patientTestData);
+			BeanUtil.copyProperties(vitalsInfo, patientTestData);
 
 			ObjectMapper mapper = new ObjectMapper();
 			vitalsTestDataAsString = mapper.writeValueAsString(vitalsInfo);

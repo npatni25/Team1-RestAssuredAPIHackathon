@@ -103,4 +103,54 @@ Feature: Verify create dieticians sceanrios
       | Scenario                                  | Expected                           |
       | CreateDietician_ValidData_InvalidEndPoint | Admin recieves 404 Not Found error |
 
- 
+  @createDietician
+  Scenario Outline: Verify create dietician with valid data and invalid content type
+    Given User is setting auth as "<Scenario>"
+    When Post condition to create dietician with invalid data from json data file
+    Then User should see <Expected>
+
+    Examples: 
+      | Scenario                                     | Expected                                        |
+      | CreateDietician_ValidData_InvalidContentType | Admin recieves 415 unsupported media type error |
+
+  @retrieveDietician
+  Scenario: Verify create dietician with valid data manually
+    When Retrieving all dietician
+
+  @retrieveDietician
+  Scenario Outline: Verify retrieve all dietician
+    Given User is setting auth as "<Scenario>"
+    When Retrieving all dietician reading from JSON data file
+    Then User should see <Expected>
+
+    Examples: 
+      | Scenario                           | Expected           |
+      | RetrieveDietician_ValidAuth        | Admin recieves 200 |
+      | RetrieveDietician_NoAuth           | Admin recieves 401 |
+      | RetrieveDietician_InvaliMethod_PUT | Admin recieves 405 |
+      | RetrieveDietician_InvaliEndPoint   | Admin recieves 404 |
+
+  @retrieveDietician
+  Scenario Outline: Verify retrieve dietician by ID
+    Given Dietician already created
+    And User is setting auth as "<Scenario>"
+    When Retrieving dietician by ID reading from JSON data file
+    Then User should see <Expected>
+
+    Examples: 
+      | Scenario                            | Expected           |
+      | RetrieveDietician_ValidAuth         | Admin recieves 200 |
+      | RetrieveDietician_NoAuth            | Admin recieves 401 |
+      | RetrieveDietician_InvaliMethod_POST | Admin recieves 405 |
+      | RetrieveDietician_InvaliEndPoint    | Admin recieves 404 |
+
+  @retrieveDietician
+  Scenario Outline: Verify retrieve dietician by ID
+    Given Dietician already created
+    And User is setting auth as "<Scenario>"
+    When Retrieving dietician by ID reading invalid ID from JSON data file
+    Then User should see <Expected>
+
+    Examples: 
+      | Scenario                            | Expected           |
+      | RetrieveDietician_InvaliDieticianID | Admin recieves 404 |
