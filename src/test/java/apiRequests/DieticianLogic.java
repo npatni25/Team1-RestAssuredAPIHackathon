@@ -26,7 +26,7 @@ import baseAPI.StoreIDs;
 import pojo.DieticianData;
 import pojo.tokenManager;
 
-public class CreateDieticianLogic {
+public class DieticianLogic {
 
 	static Response response;
 

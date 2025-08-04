@@ -12,33 +12,14 @@ Feature: Verify retrieve dieticians sceanrios
     Then User should see <Expected>
 
     Examples: 
-      | Scenario                                                                | Expected           |
-      | UpdateDietician_NoAuth                                                  | 5 |
-      | UpdateDietician_withDieticianToken                                      | Admin recieves 403 |
-      | UpdateDietician_withPatientToken                                        | Admin recieves 403 |
-      | UpdateDietician_ValidAuth                                               | Admin recieves 200 |
-      | UpdateDietician_ValidAuth_update only mandatory fields                  | Admin recieves 200 |
-      | UpdateDietician_ValidAuth_update only non-mandatory fields              | Admin recieves 400 |
-      | UpdateDietician_ValidAuth_invalid data and invalid dieticianID          | Admin recieves 400 |
-      | UpdateDietician_ValidAuth_valid data and invalid dieticianID            | Admin recieves 400 |
-      | UpdateDietician_ValidAuth_validData_validDieticianID_InvalidMethod      | Admin recieves 405 |
-      | UpdateDietician_ValidAuth_validData_validDieticianID_InvalidEndPoint    | Admin recieves 404 |
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      | Scenario                                                             | Expected           |
+      | UpdateDietician_NoAuth                                               | Admin recieves 401 |
+      | UpdateDietician_withDieticianToken                                   | Admin recieves 403 |
+      | UpdateDietician_withPatientToken                                     | Admin recieves 403 |
+      | UpdateDietician_ValidAuth                                            | Admin recieves 200 |
+      | UpdateDietician_ValidAuth_update only mandatory fields               | Admin recieves 200 |
+      | UpdateDietician_ValidAuth_update only non-mandatory fields           | Admin recieves 400 |
+      | UpdateDietician_ValidAuth_invalid data and invalid dieticianID       | Admin recieves 400 |
+      | UpdateDietician_ValidAuth_valid data and invalid dieticianID         | Admin recieves 400 |
+      | UpdateDietician_ValidAuth_validData_validDieticianID_InvalidMethod   | Admin recieves 405 |
+      | UpdateDietician_ValidAuth_validData_validDieticianID_InvalidEndPoint | Admin recieves 404 |
