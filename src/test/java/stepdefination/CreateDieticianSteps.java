@@ -77,7 +77,6 @@ public class CreateDieticianSteps {
 	public void user_should_see_admin_recieves_unauthorized(Integer expectedStatusCode) {
 		Assert.assertNotNull(response, "Response is null. API might have failed or not triggered.");
 		int ActualstatusCode = response.getStatusCode();
-		System.out.println("&&&&&&&&&&&&&&&&&&&&&" + expectedStatusCode);
 		System.out.println("!!!!!!!!!!!!!!!sttaus code for no auth" + ActualstatusCode);
 		Assert.assertEquals(ActualstatusCode, expectedStatusCode,"Expected 401 Unauthorized but got " + ActualstatusCode);
 	}
@@ -92,8 +91,6 @@ public class CreateDieticianSteps {
 	public void user_should_see_admin_recieves_forbidden_for_dietician_bearer_token(Integer expectedStatusCode) {
 		Assert.assertNotNull(response, "Response is blank");
 		int ActualstatusCode = response.getStatusCode();
-		System.out.println("&&&&&&&&&&&&&&&&&&&&&" + expectedStatusCode);
-		System.out.println("!!!!!!!!!!!!!!!sttaus code for dietiecian bearer" + ActualstatusCode);
 		Assert.assertEquals(ActualstatusCode, expectedStatusCode, "Expected 403 forbidden but got " + ActualstatusCode);
 	}
 
@@ -107,7 +104,6 @@ public class CreateDieticianSteps {
 	public void user_should_see_admin_recieves_forbidden_for_patient_bearer_token(Integer expectedStatusCode) {
 		Assert.assertNotNull(response, "Response is blank");
 		int ActualstatusCode = response.getStatusCode();
-		System.out.println("!!!!!!!!!!!!!!!sttaus code for patient bearer" + ActualstatusCode);
 		Assert.assertEquals(ActualstatusCode, expectedStatusCode, "Expected 403 forbidden but got " + ActualstatusCode);
 	}
 	
@@ -229,10 +225,35 @@ public class CreateDieticianSteps {
 		System.out.println("Response is: " + response.asPrettyString()); 
 	}
 	
-	
-	
-	
-	
+/////////////////////////--------UPDATE DIETICIAN---------/////////////////////////////////////////////////////////////////	
+		
+
+	@Given("User is setting auth to verify {string} after creating dietician")
+	public void user_is_setting_auth_to_verify_after_creating_dietician(String scenarioName) {
+		jsonReader.ScenarioContext.setScenarioName(scenarioName);
+		response = CreateDieticianLogic.createDieticianWithRandomlyGeneratedData();
+		StoreIDs.storeCreatedDietician(response);
+		StoreIDs.storeDieticianEmailAsUserName(response);
+		StoreIDs.storeDieticianPassword(response);
+		List<String> ids = StoreIDs.getAllIds();
+		System.out.println("All IDs: " + ids); 	    
+	}
+		
+	@When("Updating dietician reading from JSON data file")
+	public void updating_dietician_reading_from_json_data_file() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.InValidAuth(scenarioName);
+	}
+	    
+//	}
+//
+//	@When("Updating dietician with valid admin token reading from JSON data file")
+//	public void updating_dietician_with_valid_admin_token_reading_from_json_data_file() {
+//		String scenarioName = ScenarioContext.getScenarioName();
+//		response = CreateDieticianLogic.ValidAuth(scenarioName);
+//		System.out.println("Response is: " + response.asPrettyString());
+//	    
+	//}
 	
 	
 	
