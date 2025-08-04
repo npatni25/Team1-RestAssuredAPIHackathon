@@ -1,6 +1,8 @@
 package utils;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
@@ -19,8 +21,15 @@ public class RandomGenerator {
 		return sb.toString();
 	}
 
+	// Generate random email
+	public static String generateRandomEmail() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(generateRandomName(5)).append(".").append(generateRandomNumber(3)).append("@numpy.com");
+		return sb.toString();
+	}
+
 	// Generate random number
-	public static String getRandomNumber(int length) {
+	public static String generateRandomNumber(int length) {
 		StringBuilder sb = new StringBuilder();
 		Random random = new Random();
 		for (int i = 0; i < length; i++) {
@@ -47,16 +56,19 @@ public class RandomGenerator {
 	}
 
 	// Generate random DOB in yyyy-MM-dd date format
-	public static String generateRandomDOB() {
-		try {
-			long randomMillis = ThreadLocalRandom.current().nextLong();
-			Date randomDate = new Date(randomMillis);
+	public static String generateRandomDOBInYYYYMMDD() {
+		LocalDate start = LocalDate.of(1950, 1, 1);
+		LocalDate end = LocalDate.of(2025, 07, 31);
 
-			SimpleDateFormat isoFormatter = new SimpleDateFormat("yyyy-MM-dd");
-			return isoFormatter.format(randomDate);
-		} catch (Exception e) {
-			throw new RuntimeException("Failed to generate random DOB", e);
-		}
+		long startEpochDay = start.toEpochDay();
+		long endEpochDay = end.toEpochDay();
+
+		long randomDay = ThreadLocalRandom.current().nextLong(startEpochDay, endEpochDay);
+		LocalDate randomDate = LocalDate.ofEpochDay(randomDay);
+
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		return randomDate.format(formatter);
+
 	}
 
 }

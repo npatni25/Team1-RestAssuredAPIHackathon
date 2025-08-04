@@ -6,7 +6,7 @@ public enum ApiEndpoints {
 		APILoginPost("/login"),
 		APILogoutGet("/logoutdietician"),
 		CreateDietician("/dietician"),
-		CreatePatient("/patient"),
+		PATIENT_API_PATH(""),
 	    GetAllMorbidities ("/morbidity"),
 	    GetMorbidityByTestname("/morbidity/{morbidityName}");
 	    
