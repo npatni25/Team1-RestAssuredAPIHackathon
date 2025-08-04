@@ -242,19 +242,17 @@ public class CreateDieticianSteps {
 	@When("Updating dietician reading from JSON data file")
 	public void updating_dietician_reading_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.InValidAuth(scenarioName);
+		response = CreateDieticianLogic.updateDietician(scenarioName);
 	}
 	    
-//	}
-//
-//	@When("Updating dietician with valid admin token reading from JSON data file")
-//	public void updating_dietician_with_valid_admin_token_reading_from_json_data_file() {
-//		String scenarioName = ScenarioContext.getScenarioName();
-//		response = CreateDieticianLogic.ValidAuth(scenarioName);
-//		System.out.println("Response is: " + response.asPrettyString());
-//	    
-	//}
+/////////////////////////--------DELETE DIETICIAN---------/////////////////////////////////////////////////////////////////	
 	
+
+	@When("Delete dietician reading from JSON data file")
+	public void delete_dietician_reading_from_json_data_file() {
+		String scenarioName = ScenarioContext.getScenarioName();
+		response = CreateDieticianLogic.deleteDietician(scenarioName);
+	}
 	
 	
 	

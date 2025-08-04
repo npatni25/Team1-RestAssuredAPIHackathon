@@ -13,7 +13,7 @@ Feature: Verify retrieve dieticians sceanrios
 
     Examples: 
       | Scenario                                                                | Expected           |
-      | UpdateDietician_NoAuth                                                  | Admin recieves 401 |
+      | UpdateDietician_NoAuth                                                  | 5 |
       | UpdateDietician_withDieticianToken                                      | Admin recieves 403 |
       | UpdateDietician_withPatientToken                                        | Admin recieves 403 |
       | UpdateDietician_ValidAuth                                               | Admin recieves 200 |

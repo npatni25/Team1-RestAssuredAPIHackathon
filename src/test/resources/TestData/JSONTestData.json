@@ -469,5 +469,50 @@
     "endpoint":"/dietician/{dieticianId}",
     "expectedStatusCode": 415,
     "expectedStatusLine": "Unsupported Media Type"
+  },
+  {
+    "Scenario": "DeleteDietician_NoAuth",
+    "Type": "Negative",
+    "authType": "No Auth",
+    "contentType":"application/Text",
+    "method":"DELETE",
+    "endpoint":"/dietician/{dieticianId}",
+    "expectedStatusCode": 401
+  },
+  {
+    "Scenario": "DeleteDietician_Admin_ByValidID",
+    "Type": "Positive",
+    "authType": "Bearer {adminToken}",
+    "contentType":"application/json",
+    "method":"DELETE",
+    "endpoint":"/dietician/{dieticianId}",
+    "expectedStatusCode": 200
+  },
+  {
+    "Scenario": "DeleteDietician_Admin_ByValidID_InvalidMethod",
+    "Type": "Negative",
+    "authType": "Bearer {adminToken}",
+    "contentType":"application/json",
+    "method":"POST",
+    "endpoint":"/dietician/{dieticianId}",
+    "expectedStatusCode": 405
+  },
+    {
+      "Scenario": "DeleteDietician_Admin_By_inValidID",
+      "Type": "Negative",
+      "authType": "Bearer {adminToken}",
+      "contentType":"application/json",
+      "method":"DELETE",
+      "endpoint":"/dietician/{invalidId}",
+      "expectedStatusCode": 404
+    },
+  {
+    "Scenario": "DeleteDietician_Admin_ByValidID_InvalidEndPoint",
+    "Type": "Negative",
+    "authType": "Bearer {adminToken}",
+    "contentType":"application/json",
+    "method":"DELETE",
+    "endpoint":"/diet/{dieticianId}",
+    "expectedStatusCode": 404
   }
 ]
