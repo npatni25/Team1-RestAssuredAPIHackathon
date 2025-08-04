@@ -601,12 +601,11 @@ public class CreateDieticianLogic {
 	//////////////// --------------InValidAuth - NoAuth/PATIENT TOKEN/DIETICIAN
 	//////////////// TOKEN---------------///////////////////////////
 
-	public static Response InValidAuth(String scenarioName) {
+	public static Response updateDietician(String scenarioName) {
 		String dieticianId = StoreIDs.getLatestStoredDieticianID();
 		String invalidId = "a123";
 		String adminToken = tokenManager.getAdminToken();
-		// String dieticianToken = tokenManager.getDieticianToken(); // assuming you
-		// store it here
+		// String dieticianToken = tokenManager.getDieticianToken(); 
 		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
 		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
 		String filePath = ConfigReader.getProperty("JSON_Path");
@@ -632,10 +631,11 @@ public class CreateDieticianLogic {
 		System.out.println("Full Path: " + endpoint);
 		System.out.println("Auth type: " + auth);
 
-		RequestSpecification request = given().baseUri(baseUrl).basePath(endpoint).header("Authorization", auth)
+		RequestSpecification request = given()
+				.baseUri(baseUrl)
+				.basePath(endpoint)
+				.header("Authorization", auth)
 				.contentType(dietician.getContentType());
-
-		// System.out.println("!!!!!!!!!1" +request);
 
 		Object bodyPayload = dietician;
 
@@ -662,6 +662,66 @@ public class CreateDieticianLogic {
 		return response;
 	}
 
-	//////////////// -----------------------------///////////////////////////
+	//////////////// ---------------DELETE DIETICIAN--------------///////////////////////////
 
+	public static Response deleteDietician(String scenarioName) {
+		String dieticianId = StoreIDs.getLatestStoredDieticianID();
+		String invalidId = "9999";
+		String adminToken = tokenManager.getAdminToken();
+		// String dieticianToken = tokenManager.getDieticianToken(); 
+		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String filePath = ConfigReader.getProperty("JSON_Path");
+
+		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+		Optional<DieticianData> matchedDietician = allDieticians.stream()
+				.filter(d -> scenarioName.equalsIgnoreCase(d.getScenario())).findFirst();
+
+		if (!matchedDietician.isPresent()) {
+			throw new RuntimeException("Scenario not found in JSON: " + scenarioName);
+		}
+
+		DieticianData dietician = matchedDietician.get();
+
+		String method = dietician.getMethod();
+		String endpoint = replaceDynamicData(dietician.getEndPoint(), dieticianId, invalidId, dieticianToken,
+				adminToken, patientToken); // it will take any one of this whichever is given in json data file
+		String auth = replaceDynamicData(dietician.getauthType(), dieticianId, invalidId, dieticianToken, adminToken,
+				patientToken); // it will take any one of this whichever is given in json data
+		String baseUrl = ConfigReader.getProperty("baseUrl");
+
+		System.out.println("Method: " + method);
+		System.out.println("Full Path: " + endpoint);
+		System.out.println("Auth type: " + auth);
+
+		RequestSpecification request = given()
+				.baseUri(baseUrl)
+				.basePath(endpoint)
+				.header("Authorization", auth);
+
+		Object bodyPayload = dietician;
+
+		Response response;
+		switch (method.toUpperCase()) {
+		case "GET":
+			response = request.get();
+			break;
+		case "POST":
+			response = request.body(bodyPayload).post();
+			break;
+		case "PUT":
+			response = request.body(bodyPayload).put();
+			break;
+		case "DELETE":
+			response = request.delete();
+			break;
+		default:
+			throw new IllegalArgumentException("Unsupported HTTP method: " + method);
+		}
+
+		System.out.println("Response:\n" + response.asPrettyString());
+		System.out.println("Response code:\n" + response.getStatusCode());
+		return response;
+	}
+	
 }
