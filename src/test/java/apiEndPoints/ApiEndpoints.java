@@ -6,6 +6,7 @@ public enum ApiEndpoints {
 		APILoginPost("/login"),
 		APILogoutGet("/logoutdietician"),
 		CreateDietician("/dietician"),
+		InvalidDieticianEndPoint("/diet"),
 	    GetAllMorbidities ("/morbidity"),
 	    GetMorbidityByTestname("/morbidity/{morbidityName}");
 	

@@ -63,6 +63,18 @@ public class StoreIDs {
             System.out.println("Dietician Username stored is: " + dieticianUsername);
         }
     }
+
+    public static String getLatestStoredDieticianID()
+    {
+    	 if (!ids.isEmpty()) {
+    	        return ids.get(ids.size() - 1);
+    	    }
+    	    return null;
+    }
+
+
+
+
 }
 
 
