@@ -5,7 +5,7 @@ import static org.testng.Assert.assertEquals;
 import java.util.List;
 import org.testng.Assert;
 
-import apiRequests.CreateDieticianLogic;
+import apiRequests.DieticianLogic;
 import baseAPI.BaseAPI;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
@@ -13,7 +13,7 @@ import utils.jsonReader;
 import utils.jsonReader.ScenarioContext;
 import baseAPI.StoreIDs;
 
-public class CreateDieticianSteps {
+public class DieticianSteps {
 
 	private Response response; // Shared across steps
 	private String sheet;
@@ -36,7 +36,7 @@ public class CreateDieticianSteps {
 	@When("post condition with valid data from json data file")
 	public void post_condition_with_valid_data_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDieticianThroughJSONData1(scenarioName);
+		response = DieticianLogic.createDieticianThroughJSONData1(scenarioName);
 		StoreIDs.storeCreatedDietician(response);
 		StoreIDs.storeDieticianEmailAsUserName(response);
 		StoreIDs.storeDieticianPassword(response);
@@ -46,7 +46,7 @@ public class CreateDieticianSteps {
 	
 	@When("post condition with auto generate valid data")
 	public void post_condition_with_auto_generate_valid_data() {
-		response = CreateDieticianLogic.createDieticianWithRandomlyGeneratedData();
+		response = DieticianLogic.createDieticianWithRandomlyGeneratedData();
 		StoreIDs.storeCreatedDietician(response);
 		StoreIDs.storeDieticianEmailAsUserName(response);
 		StoreIDs.storeDieticianPassword(response);
@@ -70,7 +70,7 @@ public class CreateDieticianSteps {
 	@When("Post condition to create dietician with No Auth after providing valid data from json data file")
 	public void post_condition_to_create_dietician_with_no_auth_after_providing_valid_data_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDietician_invalidAuth(scenarioName);
+		response = DieticianLogic.createDietician_invalidAuth(scenarioName);
 	}
 
 	@Then("User should see Admin recieves {int} unauthorized")
@@ -84,7 +84,7 @@ public class CreateDieticianSteps {
 	@When("Post condition to create dietician with Dietician token after providing valid data from json data file")
 	public void post_condition_to_create_dietician_with_dietician_token_after_providing_valid_data_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDietician_DieticianToken(scenarioName);
+		response = DieticianLogic.createDietician_DieticianToken(scenarioName);
 	}
 
 	@Then("User should see Admin recieves {int} forbidden for Dietician bearer token")
@@ -97,7 +97,7 @@ public class CreateDieticianSteps {
 	@When("Post condition to create dietician with Patient token after providing valid data from json data file")
 	public void post_condition_to_create_dietician_with_patient_token_after_providing_valid_data_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDietician_PatientToken(scenarioName);
+		response = DieticianLogic.createDietician_PatientToken(scenarioName);
 	}
 
 	@Then("User should see Admin recieves {int} forbidden for Patient bearer token")
@@ -110,7 +110,7 @@ public class CreateDieticianSteps {
 	@When("Post condition to create dietician with invalid data from json data file")
 	public void post_condition_to_create_dietician_with_invalid_data_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDieticianThroughJSONData1(scenarioName);
+		response = DieticianLogic.createDieticianThroughJSONData1(scenarioName);
 	}
 
 	@Then("User should see Admin recieves {int} Bad Request error")
@@ -123,7 +123,7 @@ public class CreateDieticianSteps {
 	@When("Post condition to create dietician with invalid PinCode from json data file")
 	public void post_condition_to_create_dietician_with_invalid_pin_code_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDieticianThroughJSONData1(scenarioName);
+		response = DieticianLogic.createDieticianThroughJSONData1(scenarioName);
 	}
 
 	@Then("User should see Admin recieves {string} error")
@@ -143,7 +143,7 @@ public class CreateDieticianSteps {
 	@When("Post condition to create dietician with invalid API request")
 	public void post_condition_to_create_dietician_with_invalid_api_request() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDietician_InvalidAPIReq_PUT(scenarioName);
+		response = DieticianLogic.createDietician_InvalidAPIReq_PUT(scenarioName);
 	}
 
 	@Then("User should see Admin recieves {int} Method Not Allowed error")
@@ -156,7 +156,7 @@ public class CreateDieticianSteps {
 	@When("Post condition to create dietician with invalid End Point")
 	public void post_condition_to_create_dietician_with_invalid_end_point() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.createDietician_InvalidEndPoint(scenarioName);
+		response = DieticianLogic.createDietician_InvalidEndPoint(scenarioName);
 	}
 
 	@Then("User should see Admin recieves {int} Not Found error")
@@ -177,20 +177,20 @@ public class CreateDieticianSteps {
 	@When("Retrieving all dietician with no Auth {string}")
 	public void retrieving_all_dietician_with_no_auth(String scenarioName) {
 		
-		response = CreateDieticianLogic.getAllDietician();
+		response = DieticianLogic.getAllDietician();
 		System.out.println("Response is" +response.asPrettyString());		
 	}
 
 	@When("Retrieving all dietician")
 	public void retrieving_all_dietician() {
-		response = CreateDieticianLogic.getAllDietician();
+		response = DieticianLogic.getAllDietician();
 		System.out.println("Response is" +response.asPrettyString());
 	}
 	
 	@When("Retrieving all dietician reading from JSON data file")
 	public void retrieving_all_dietician_reading_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.getAllDieticianJSON(scenarioName);
+		response = DieticianLogic.getAllDieticianJSON(scenarioName);
 		System.out.println("Response is: " + response.asPrettyString());
 	}
 
@@ -203,7 +203,7 @@ public class CreateDieticianSteps {
 	
 	@Given("Dietician already created")
 	public void dietician_already_created() {
-		response = CreateDieticianLogic.createDieticianWithRandomlyGeneratedData();
+		response = DieticianLogic.createDieticianWithRandomlyGeneratedData();
 		StoreIDs.storeCreatedDietician(response);
 		StoreIDs.storeDieticianEmailAsUserName(response);
 		StoreIDs.storeDieticianPassword(response);
@@ -214,14 +214,14 @@ public class CreateDieticianSteps {
 	@When("Retrieving dietician by ID reading from JSON data file")
 	public void retrieving_dietician_by_id_reading_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.getDieticianById(scenarioName);
+		response = DieticianLogic.getDieticianById(scenarioName);
 		System.out.println("Response is: " + response.asPrettyString());
 	}
 	
 	@When("Retrieving dietician by ID reading invalid ID from JSON data file")
 	public void retrieving_dietician_by_id_reading_invalid_id_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.getDieticianByInvaliId(scenarioName);
+		response = DieticianLogic.getDieticianByInvaliId(scenarioName);
 		System.out.println("Response is: " + response.asPrettyString()); 
 	}
 	
@@ -231,7 +231,7 @@ public class CreateDieticianSteps {
 	@Given("User is setting auth to verify {string} after creating dietician")
 	public void user_is_setting_auth_to_verify_after_creating_dietician(String scenarioName) {
 		jsonReader.ScenarioContext.setScenarioName(scenarioName);
-		response = CreateDieticianLogic.createDieticianWithRandomlyGeneratedData();
+		response = DieticianLogic.createDieticianWithRandomlyGeneratedData();
 		StoreIDs.storeCreatedDietician(response);
 		StoreIDs.storeDieticianEmailAsUserName(response);
 		StoreIDs.storeDieticianPassword(response);
@@ -242,7 +242,7 @@ public class CreateDieticianSteps {
 	@When("Updating dietician reading from JSON data file")
 	public void updating_dietician_reading_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.updateDietician(scenarioName);
+		response = DieticianLogic.updateDietician(scenarioName);
 	}
 	    
 /////////////////////////--------DELETE DIETICIAN---------/////////////////////////////////////////////////////////////////	
@@ -251,7 +251,7 @@ public class CreateDieticianSteps {
 	@When("Delete dietician reading from JSON data file")
 	public void delete_dietician_reading_from_json_data_file() {
 		String scenarioName = ScenarioContext.getScenarioName();
-		response = CreateDieticianLogic.deleteDietician(scenarioName);
+		response = DieticianLogic.deleteDietician(scenarioName);
 	}
 	
 	

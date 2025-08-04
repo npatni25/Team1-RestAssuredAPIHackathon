@@ -103,13 +103,4 @@ Feature: Verify create dieticians sceanrios
       | Scenario                                  | Expected                           |
       | CreateDietician_ValidData_InvalidEndPoint | Admin recieves 404 Not Found error |
 
-  #@createDietician
-  #Scenario Outline: Verify create dietician with valid data and invalid content type
-    #Given User is setting auth as "<Scenario>"
-    #When Post condition to create dietician with invalid data from json data file
-    #Then User should see <Expected>
-#
-    #Examples: 
-      #| Scenario                                     | Expected                                        |
-      #| CreateDietician_ValidData_InvalidContentType | Admin recieves 415 unsupported media type error |
-
+ 
