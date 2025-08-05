@@ -1,0 +1,130 @@
+{
+	"requests": [
+		{
+			"LoginInvalidCreds": {
+				"scenario": "Login Invalid Email & Password",
+				"userLoginEmail": "Team70@gmail.com",
+				"password": "test11",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+			{
+			"LoginInvalidEndpoint": {
+				"scenario": "Login Invalid Endpoint",
+				"userLoginEmail": "Team701@gmail.com",
+				"password": "test",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+		{
+			"LoginEmptyCredential": {
+				"scenario": "Login Empty Credentials",
+				"userLoginEmail": "",
+				"password": "",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+		{
+			"LoginEmptyUserEmail": {
+				"scenario": "Login Empty User email id ",
+				"userLoginEmail": "",
+				"password": "test",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+		{
+			"LoginEmptyPassword": {
+				"scenario": "Login Empty Password",
+				"userLoginEmail": "Team701@gmail.com",
+				"password": "",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+		{
+			"LoginInvalidEmailFormat": {
+				"scenario": "Login Invalid Email format",
+				"userLoginEmail": "Team701gmail.com",
+				"password": "test",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+		{
+			"LoginIncorrectPassword": {
+				"scenario": "Login Incorrect Password",
+				"userLoginEmail": "Team701gmail.com",
+				"password": "123456",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+		{
+			"GetAllValidMorbidity": {
+				"scenario": "GetAllValid Morbidity",
+				"authType": "Bearer Token",
+				"statusCode": 200,
+				"statusText": "HTTP/1.1 200 OK"
+			}
+		},
+		{
+			"GetAllMorbidityInValidEP": {
+				"scenario": "Get All Morbidity end point",
+				"statusCode": 404,
+				"statusText": "HTTP/1.1 404 Not Found"
+			}
+		},
+		{
+			"GetMorbidityByInvalidMorbidityName": {
+				"scenario": "Get Morbidity By Invalid MorbidityName",
+				"authType": "Bearer Token",
+				"statusCode": 400,
+				"morbidityName": "sssss",
+				"statusText": "HTTP/1.1 400 Bad Request"
+			}
+		},
+		{
+			"GetMorbidityByvalidMorbidityName": {
+				"scenario": "Get Morbidity By valid MorbidityName",
+				"authType": "Bearer Token",
+				"statusCode": 200,
+				"morbidityName": "sssss",
+				"statusText": "HTTP/1.1 200 OK"
+			}
+		},
+		{
+			"GetMorbidityByNameInValidEP": {
+				"scenario": "Get Morbidity By Name InvalidEP",
+				"authType": "Bearer Token",
+				"statusCode": 200,
+				"morbidityName": "sssss",
+				"statusText": "HTTP/1.1 200 OK"
+			}
+		},
+		{
+			"NoAuthLogout": {
+				"scenario": "Logout No Auth",
+				"statusCode": 401,
+				"statusText": "HTTP/1.1 401 Unauthorized"
+			}
+		},
+		{
+			"LogoutValid": {
+				"scenario": "Logout Valid",
+				"statusCode": 200,
+				"statusText": "HTTP/1.1 200 OK"
+			}
+		},
+		{
+			"LogoutInvalidEP": {
+				"scenario": "Logout Invalid endpoint",
+				"statusCode": 404,
+				"statusText": "HTTP/1.1 404 Not Found"
+			}
+		}
+	]
+}
