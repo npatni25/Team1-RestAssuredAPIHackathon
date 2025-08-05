@@ -1,12 +1,13 @@
 Feature: Verify create patient as a dieticiation sceanrios
 
-  Background: 
 
   
   Scenario: Create Dietician with all the valid informations
-    Given Admin user loggedin
-    When post condition with valid data from sheet "CreateDietician" with test case no "TC01" is provided
-    Then A new dietician should get created
+    Given Admin user loggedin1
+    When post condition with valid data from sheet "CreateDietician" with test case no "TC01" is provided1
+    Then A new dietician should get created1
+    
+    
 
   Scenario: Check dietician able to create patient with valid data and token
     Given Dietician is logged in

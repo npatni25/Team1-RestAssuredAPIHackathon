@@ -24,8 +24,7 @@ public class UserLogoutStep {
 	@Given("Admin sets authorization to Bearer Token after logged in")
 	public void admin_sets_authorization_to_bearer_token_after_logged_in() {
 		
-		//context.get("ADMINLOGIN_TOKEN")
-		;
+		//context.get("ADMINLOGIN_TOKEN");
 	}
 
 	@Given("Admin creates Logout {string} Request")

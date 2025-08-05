@@ -121,13 +121,6 @@ public class PatientStepDefinetions {
 	        PatientService.createPatient(scenarioName);
 		}
 
-		//@When("Dietician send POST http request with endpoint")
-		//public void dietician_send_post_http_request_with_endpoint() {
-			 //response = PatientService.createPatient("Patient_NoAuth");
-			//response = PatientService.createPatient_noAuth("NoAuth");
-
-		//}
-
 		@Then("Dietician receives {int} unauthorized")
 		public void dietician_receives_unauthorized(Integer int1) {
 			 //Assert.assertEquals(response.statusCode(), 401, "Expected status code 401 but got " + response.statusCode());
@@ -137,7 +130,7 @@ public class PatientStepDefinetions {
 	//patienttoken
 	   @Given("Admin creates POST request by entering valid data into the form-data key and values")
 	    public void admin_creates_post_request_by_entering_valid_data_into_the_form_data_key_and_values() {
-		   //response = PatientService.createPatient("Admin_CreatePatient_Valid");
+		   response = PatientService.createPatient("Admin_CreatePatient_Valid");
 	   }
 
 	   @When("Admin send POST http request with endpoint")

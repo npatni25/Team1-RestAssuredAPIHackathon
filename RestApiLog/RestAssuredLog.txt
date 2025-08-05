@@ -26114,3 +26114,1893 @@ Content-Length: 123
     "error": "Unauthorized",
     "message": "An unexpected error occurred."
 }
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:29:02 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Kc234evVZ1YZbQn3kuLHM5DovL4SwJ6x3ssOLzRiOcI%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754414943"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=Kc234evVZ1YZbQn3kuLHM5DovL4SwJ6x3ssOLzRiOcI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754414943"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNDk0MywiZXhwIjoxNzU0NDQzNzQzfQ.wVWt9SLEHfR8J_cKJtaVZSJieD6hNKdX-ZgxgIWgfsc3kffeAaQnc_GRTeJuDHIxXQv2sB6sb102C0FIgKarrg",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:29:03 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Kc234evVZ1YZbQn3kuLHM5DovL4SwJ6x3ssOLzRiOcI%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754414943"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=Kc234evVZ1YZbQn3kuLHM5DovL4SwJ6x3ssOLzRiOcI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754414943"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNDk0MywiZXhwIjoxNzU0NDQzNzQzfQ.wVWt9SLEHfR8J_cKJtaVZSJieD6hNKdX-ZgxgIWgfsc3kffeAaQnc_GRTeJuDHIxXQv2sB6sb102C0FIgKarrg",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:29:03 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ZUyOP7ezhSycVHa2YFvwc5aJPpGvEPwdeyU7MoHue4I%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754414944"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=ZUyOP7ezhSycVHa2YFvwc5aJPpGvEPwdeyU7MoHue4I%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754414944"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNDk0NCwiZXhwIjoxNzU0NDQzNzQ0fQ.kfBjo1rwOsqXaOFqOHrLZnJnCu8qvhKz34vuzQidzRYJlJI-z0KwsDAsWZCZvES0pcIKy-ghoYsi3tt4L5-ArQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:29:03 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ZUyOP7ezhSycVHa2YFvwc5aJPpGvEPwdeyU7MoHue4I%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754414944"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=ZUyOP7ezhSycVHa2YFvwc5aJPpGvEPwdeyU7MoHue4I%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754414944"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNDk0NCwiZXhwIjoxNzU0NDQzNzQ0fQ.kfBjo1rwOsqXaOFqOHrLZnJnCu8qvhKz34vuzQidzRYJlJI-z0KwsDAsWZCZvES0pcIKy-ghoYsi3tt4L5-ArQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:29:03 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ZUyOP7ezhSycVHa2YFvwc5aJPpGvEPwdeyU7MoHue4I%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754414944"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=ZUyOP7ezhSycVHa2YFvwc5aJPpGvEPwdeyU7MoHue4I%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754414944"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNDk0NCwiZXhwIjoxNzU0NDQzNzQ0fQ.kfBjo1rwOsqXaOFqOHrLZnJnCu8qvhKz34vuzQidzRYJlJI-z0KwsDAsWZCZvES0pcIKy-ghoYsi3tt4L5-ArQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:44:46 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=hlCcvB9VGIfPRD1oF8eaf8ThMg3sLIjlxocCLPBmrQY%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754415886"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=hlCcvB9VGIfPRD1oF8eaf8ThMg3sLIjlxocCLPBmrQY%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754415886"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNTg4NiwiZXhwIjoxNzU0NDQ0Njg2fQ.btbVornwyBkNqIjfZa9PXNZ-9afm9pQu99975ivM-hdRolX2-Ui5QZkOSRWuTvpmugFflIuPfM4L3Yp_4NqITQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:46:46 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=hkUu79j2nkxc0n1g%2BcuzzAi92vNwnZMHT6%2BhFHthOio%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416006"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=hkUu79j2nkxc0n1g%2BcuzzAi92vNwnZMHT6%2BhFHthOio%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416006"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjAwNiwiZXhwIjoxNzU0NDQ0ODA2fQ.CaJ5ZWE1FYJUTln0M9AlsVOFKmRvxT3Jm4DbAKVF5gGyuekoYDnCIMpl3KJ5AbKAvy9keXwRxSPc6XT59TZR0g",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 17:48:46 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2BhRYcnTLNz2khRTouJniDhPQt4nzxQ77Crlj6wyyKSE%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416126"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=%2BhRYcnTLNz2khRTouJniDhPQt4nzxQ77Crlj6wyyKSE%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416126"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjEyNiwiZXhwIjoxNzU0NDQ0OTI2fQ.zzXy7jw0n1vDCymQDZ2nrLzqF7Hv0X2eBGaQoGgYmBGPEopz5IM6Qor1usKLiiWOdQ0AGBDwEzSAzrGHWMl4Sw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:02:32 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=GbWNryNPAGjrvgr5zzTdtFto9MJL6dcrRxFaAyKFMrY%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416952"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=GbWNryNPAGjrvgr5zzTdtFto9MJL6dcrRxFaAyKFMrY%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416952"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjk1MiwiZXhwIjoxNzU0NDQ1NzUyfQ.WS6-9UfWZcDpFmxhpPTCnUIEDd84xnv8JKSK_5x2D9AU9kv2PgZrs85m-6pf7XqXKk9Orr4saxFjB45eeP6Ugw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:03:01 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=XyI5o%2FcO3YbzuyjpCZSCyd6CK1b0fdi7B9s%2FOMRjKVw%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416981"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=XyI5o%2FcO3YbzuyjpCZSCyd6CK1b0fdi7B9s%2FOMRjKVw%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416981"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjk4MSwiZXhwIjoxNzU0NDQ1NzgxfQ.ndhgFpfnURroZ5FOgRHlz4921M72rf_ll9Sg5vPUwxGyFiPIzEjZKuwvKlEZslYR-sAj3dyLdpKFOPHe9SUknA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:03:01 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=XyI5o%2FcO3YbzuyjpCZSCyd6CK1b0fdi7B9s%2FOMRjKVw%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416981"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=XyI5o%2FcO3YbzuyjpCZSCyd6CK1b0fdi7B9s%2FOMRjKVw%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416981"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjk4MSwiZXhwIjoxNzU0NDQ1NzgxfQ.ndhgFpfnURroZ5FOgRHlz4921M72rf_ll9Sg5vPUwxGyFiPIzEjZKuwvKlEZslYR-sAj3dyLdpKFOPHe9SUknA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:03:01 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ylZ2gZzTnfvAQaBUWcnSzwLwZuhAkfT2bK91GTbGD6w%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416982"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=ylZ2gZzTnfvAQaBUWcnSzwLwZuhAkfT2bK91GTbGD6w%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416982"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjk4MiwiZXhwIjoxNzU0NDQ1NzgyfQ._jagvgOX1AbTHOQom0UWKgDMk_112ILkoo1YQdH_Z9qhCtXS5DkSp7G35FD_e8JHT4iVQl7nm1oqowIyEA0ULA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:03:01 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ylZ2gZzTnfvAQaBUWcnSzwLwZuhAkfT2bK91GTbGD6w%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416982"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=ylZ2gZzTnfvAQaBUWcnSzwLwZuhAkfT2bK91GTbGD6w%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416982"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjk4MiwiZXhwIjoxNzU0NDQ1NzgyfQ._jagvgOX1AbTHOQom0UWKgDMk_112ILkoo1YQdH_Z9qhCtXS5DkSp7G35FD_e8JHT4iVQl7nm1oqowIyEA0ULA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:03:01 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ylZ2gZzTnfvAQaBUWcnSzwLwZuhAkfT2bK91GTbGD6w%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754416982"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=ylZ2gZzTnfvAQaBUWcnSzwLwZuhAkfT2bK91GTbGD6w%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754416982"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNjk4MiwiZXhwIjoxNzU0NDQ1NzgyfQ._jagvgOX1AbTHOQom0UWKgDMk_112ILkoo1YQdH_Z9qhCtXS5DkSp7G35FD_e8JHT4iVQl7nm1oqowIyEA0ULA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:07:55 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ts3YbdgOCRJJC9bmoMEIvtOjfc1MoHhLaNEncarxy7o%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754417275"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=ts3YbdgOCRJJC9bmoMEIvtOjfc1MoHhLaNEncarxy7o%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754417275"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNzI3NSwiZXhwIjoxNzU0NDQ2MDc1fQ.M0zESDba_cDq9v-8F9WXv521ZTKhB6weCm9tkED1MtL7fZlrZWcXZD18C47YEdwo0-WxVYkjwo0AVAJeR9Uytw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:08:24 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=sKObZkJXg5C7UAi%2Fh1EsmTAIr4uv7vVO8Eyk%2BiO%2FJU4%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754417304"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=sKObZkJXg5C7UAi%2Fh1EsmTAIr4uv7vVO8Eyk%2BiO%2FJU4%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754417304"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNzMwNCwiZXhwIjoxNzU0NDQ2MTA0fQ.xQXCPJUYxQuqxpH7fJILKaArgA9YSz_lCO_4js7Yt-ancdHC5Nj6hLwH2sFa-ODI8tUgLXYR4VJ1tNW1RqfF1g",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:08:24 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754417305"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754417305"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNzMwNSwiZXhwIjoxNzU0NDQ2MTA1fQ.WeA4F2wYxd5PRqbBkGfEhV8xhITYu3eh1ehO26wLzzQtfpasF66xCVrXCyQ9EL6_GF9xHvxTc217vlzSIMiFmw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:08:24 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754417305"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754417305"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNzMwNSwiZXhwIjoxNzU0NDQ2MTA1fQ.WeA4F2wYxd5PRqbBkGfEhV8xhITYu3eh1ehO26wLzzQtfpasF66xCVrXCyQ9EL6_GF9xHvxTc217vlzSIMiFmw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:08:24 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754417305"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754417305"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNzMwNSwiZXhwIjoxNzU0NDQ2MTA1fQ.WeA4F2wYxd5PRqbBkGfEhV8xhITYu3eh1ehO26wLzzQtfpasF66xCVrXCyQ9EL6_GF9xHvxTc217vlzSIMiFmw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:08:24 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754417305"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=Yn0gYnPF0LDi3%2FymXBHfRkMLJ%2B6eh%2BMES6dTos8%2FgeM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754417305"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNzMwNSwiZXhwIjoxNzU0NDQ2MTA1fQ.WeA4F2wYxd5PRqbBkGfEhV8xhITYu3eh1ehO26wLzzQtfpasF66xCVrXCyQ9EL6_GF9xHvxTc217vlzSIMiFmw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:14:32 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=bD4lM9wyTQhMbPRYXaUarR08gkB7TQ6Rx97XmJ8qK5w%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754417672"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=bD4lM9wyTQhMbPRYXaUarR08gkB7TQ6Rx97XmJ8qK5w%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754417672"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxNzY3MiwiZXhwIjoxNzU0NDQ2NDcyfQ.F4KWMzjxml0UiHWbyLOnGj2Tr_0e5yIYh3EsLgf64RAh43IWUeIpmcROyGnFdNHFMAbY_KxGEDx5GguaLc5LFw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:33:35 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=LCAoV7CdFtUakB%2FMdAqxOjT0TiJcufrzHQ0xgWK9FOY%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754418815"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=LCAoV7CdFtUakB%2FMdAqxOjT0TiJcufrzHQ0xgWK9FOY%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754418815"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxODgxNSwiZXhwIjoxNzU0NDQ3NjE1fQ.sVbDL56t15y4O2xrmEj8YuPyvalftvi6JdhZHPQUH5Ul2R_zgk5Ko5v0p_NJbgVN8aLSxOh2smTgipeAcVphqg",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:33:36 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754418816"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754418816"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxODgxNiwiZXhwIjoxNzU0NDQ3NjE2fQ.ialJgxUbleBVpPLXq1HO4C6kFdZBYJQdIrB706ncBeMK3I7MhWVDh5mJ_i7RWF2Q0zIinrkRu4D8xbR5yvNxNA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:33:36 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754418816"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754418816"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxODgxNiwiZXhwIjoxNzU0NDQ3NjE2fQ.ialJgxUbleBVpPLXq1HO4C6kFdZBYJQdIrB706ncBeMK3I7MhWVDh5mJ_i7RWF2Q0zIinrkRu4D8xbR5yvNxNA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:33:36 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754418816"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754418816"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxODgxNiwiZXhwIjoxNzU0NDQ3NjE2fQ.ialJgxUbleBVpPLXq1HO4C6kFdZBYJQdIrB706ncBeMK3I7MhWVDh5mJ_i7RWF2Q0zIinrkRu4D8xbR5yvNxNA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:33:36 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754418816"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=BU8Peo2Y2ES9TcC2DUoiKEyf6%2Bh%2F4a0HJo3wFWvnuAQ%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754418816"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxODgxNiwiZXhwIjoxNzU0NDQ3NjE2fQ.ialJgxUbleBVpPLXq1HO4C6kFdZBYJQdIrB706ncBeMK3I7MhWVDh5mJ_i7RWF2Q0zIinrkRu4D8xbR5yvNxNA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:38:41 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=t%2FTZxbzupNjqLwtxGMy55o43wVCOOEmnfFRGZx6VGWU%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754419121"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=t%2FTZxbzupNjqLwtxGMy55o43wVCOOEmnfFRGZx6VGWU%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754419121"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxOTEyMSwiZXhwIjoxNzU0NDQ3OTIxfQ.A2PMSGW5rnqScYC4Ub-r3117O4UD-hMv7hjvJUQylaC3B_QVY5uJ85lpB_g65KXdiQ72y0X33oIMB17z0xLgbQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:38:41 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=c4hfevhrOTmSSneCWelkQAWqq5jaomE2ggGFdUR%2BM0E%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754419122"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=c4hfevhrOTmSSneCWelkQAWqq5jaomE2ggGFdUR%2BM0E%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754419122"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxOTEyMiwiZXhwIjoxNzU0NDQ3OTIyfQ.ZGBCkRfwWLfC46qGuTELLIH-RVhKO1IroZnUOdBJym2PRNTBhxBg53GM0yoJpMwsWAWvb6vO_6x-H2QWU2bgdA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:38:42 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=c4hfevhrOTmSSneCWelkQAWqq5jaomE2ggGFdUR%2BM0E%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754419122"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=c4hfevhrOTmSSneCWelkQAWqq5jaomE2ggGFdUR%2BM0E%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754419122"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxOTEyMiwiZXhwIjoxNzU0NDQ3OTIyfQ.ZGBCkRfwWLfC46qGuTELLIH-RVhKO1IroZnUOdBJym2PRNTBhxBg53GM0yoJpMwsWAWvb6vO_6x-H2QWU2bgdA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 18:38:42 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=c4hfevhrOTmSSneCWelkQAWqq5jaomE2ggGFdUR%2BM0E%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754419122"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=c4hfevhrOTmSSneCWelkQAWqq5jaomE2ggGFdUR%2BM0E%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754419122"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQxOTEyMiwiZXhwIjoxNzU0NDQ3OTIyfQ.ZGBCkRfwWLfC46qGuTELLIH-RVhKO1IroZnUOdBJym2PRNTBhxBg53GM0yoJpMwsWAWvb6vO_6x-H2QWU2bgdA",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:01:05 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=NYgzdSQLXKunFZAWqiDyxhMMPh7SUAIIc8RsLHol5K4%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420465"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=NYgzdSQLXKunFZAWqiDyxhMMPh7SUAIIc8RsLHol5K4%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420465"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDQ2NSwiZXhwIjoxNzU0NDQ5MjY1fQ.Z_gSildLkRyGc7Q9GbfcTiVKW40uzFK8jpKB991spA06XWN9njFy9WriLJKGCItttDMv8MSIGMXcfaSvjgyU3A",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:05:11 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=vB4jMT4Na%2B9rJ4XQxkU%2FlAj3wpvWf8E1XWDwnmGT6dE%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420711"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=vB4jMT4Na%2B9rJ4XQxkU%2FlAj3wpvWf8E1XWDwnmGT6dE%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420711"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDcxMSwiZXhwIjoxNzU0NDQ5NTExfQ._U9DkgQRmSaj7G9u-eXWw7XoxMndJAZb-AItmDsyIAt01c6p5SCnQoMODGMyYCWdbvxnXhkZTpIV3OeAAEZoBw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:05:41 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=E4yqdkRu92HHVwRYv%2BCdyDlkmSxev%2FPxZt0PWfXHkY4%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420741"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=E4yqdkRu92HHVwRYv%2BCdyDlkmSxev%2FPxZt0PWfXHkY4%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420741"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDc0MSwiZXhwIjoxNzU0NDQ5NTQxfQ.Xn4AlmGSZQwvcBtLIt2olu8NqpuQZLPVu1SpODro7Xtg5gGKplkxtiMFw9qXCFqmClc6Gi2onXX5Fa6CezT6cQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:05:41 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=E4yqdkRu92HHVwRYv%2BCdyDlkmSxev%2FPxZt0PWfXHkY4%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420741"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=E4yqdkRu92HHVwRYv%2BCdyDlkmSxev%2FPxZt0PWfXHkY4%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420741"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDc0MSwiZXhwIjoxNzU0NDQ5NTQxfQ.Xn4AlmGSZQwvcBtLIt2olu8NqpuQZLPVu1SpODro7Xtg5gGKplkxtiMFw9qXCFqmClc6Gi2onXX5Fa6CezT6cQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:05:41 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=E4yqdkRu92HHVwRYv%2BCdyDlkmSxev%2FPxZt0PWfXHkY4%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420741"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=E4yqdkRu92HHVwRYv%2BCdyDlkmSxev%2FPxZt0PWfXHkY4%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420741"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDc0MiwiZXhwIjoxNzU0NDQ5NTQyfQ.sP3U3PzKUdzs_y1pGUDvNtr5qKkEMTBrq0j25D7UpnkAjOw2N9asmETcpxQ57TBZ_ccoBfNwXz_wL_otwIRZqQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:05:41 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=K%2FCT6NN6xYt3tZMkoMkBy4%2FHLv85xCL8URGzSUadpMg%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420742"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=K%2FCT6NN6xYt3tZMkoMkBy4%2FHLv85xCL8URGzSUadpMg%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420742"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDc0MiwiZXhwIjoxNzU0NDQ5NTQyfQ.sP3U3PzKUdzs_y1pGUDvNtr5qKkEMTBrq0j25D7UpnkAjOw2N9asmETcpxQ57TBZ_ccoBfNwXz_wL_otwIRZqQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:05:41 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=K%2FCT6NN6xYt3tZMkoMkBy4%2FHLv85xCL8URGzSUadpMg%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420742"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=K%2FCT6NN6xYt3tZMkoMkBy4%2FHLv85xCL8URGzSUadpMg%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420742"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDc0MiwiZXhwIjoxNzU0NDQ5NTQyfQ.sP3U3PzKUdzs_y1pGUDvNtr5qKkEMTBrq0j25D7UpnkAjOw2N9asmETcpxQ57TBZ_ccoBfNwXz_wL_otwIRZqQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:08:03 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=qlb5SPoRwSiNcoKteuD76vLpQgeebRglGf9jIvwAE%2F0%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420883"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=qlb5SPoRwSiNcoKteuD76vLpQgeebRglGf9jIvwAE%2F0%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420883"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDg4MywiZXhwIjoxNzU0NDQ5NjgzfQ.A5_rnhzxle_Rn6aB2tIugPt0lNi3eChDRtrXaqIKomYtmJk0fs37CGXFYEksNRFc0nqZXYC4ZP2Cu_SBwcILzw",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:08:03 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=RghCo58dr7gpNa%2Fft%2FpKWOWOIlOqe1vJlkS8YF1KbtM%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420884"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=RghCo58dr7gpNa%2Fft%2FpKWOWOIlOqe1vJlkS8YF1KbtM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420884"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDg4NCwiZXhwIjoxNzU0NDQ5Njg0fQ.H0-ZMVAVh4w-lwSaoTq5Qr4w0VfKi3bltRF8bkMzrpJHGm73-3ekPG6Vvu2v-e4jYNKHw0X8MypRrkF1LGZUcQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:08:05 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2BnYE0apjVbxbkyPTdZPxCrgQ5vadW0BgKhMtUTvwPtY%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420885"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=%2BnYE0apjVbxbkyPTdZPxCrgQ5vadW0BgKhMtUTvwPtY%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420885"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDg4NSwiZXhwIjoxNzU0NDQ5Njg1fQ.gYGl3AZkhhRxtgg0BA80BVSzjMmbL02IiUshgHhDlYNoyVq25UJTwvG0hZxgpJnN7E3NNGuXBzmPOOavTBHTGQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:08:05 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2BnYE0apjVbxbkyPTdZPxCrgQ5vadW0BgKhMtUTvwPtY%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420885"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=%2BnYE0apjVbxbkyPTdZPxCrgQ5vadW0BgKhMtUTvwPtY%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420885"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDg4NSwiZXhwIjoxNzU0NDQ5Njg1fQ.gYGl3AZkhhRxtgg0BA80BVSzjMmbL02IiUshgHhDlYNoyVq25UJTwvG0hZxgpJnN7E3NNGuXBzmPOOavTBHTGQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}
+Request method:	POST
+Request URI:	https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmail": "testingteam01@gmail.com",
+    "password": "test"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Tue, 05 Aug 2025 19:08:05 GMT
+Expires: 0
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Pragma: no-cache
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2BnYE0apjVbxbkyPTdZPxCrgQ5vadW0BgKhMtUTvwPtY%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1754420885"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=%2BnYE0apjVbxbkyPTdZPxCrgQ5vadW0BgKhMtUTvwPtY%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1754420885"
+Server: Heroku
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Content-Length: 307
+
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5ndGVhbTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1NDQyMDg4NSwiZXhwIjoxNzU0NDQ5Njg1fQ.gYGl3AZkhhRxtgg0BA80BVSzjMmbL02IiUshgHhDlYNoyVq25UJTwvG0hZxgpJnN7E3NNGuXBzmPOOavTBHTGQ",
+    "type": "Bearer ",
+    "userId": 1651,
+    "loginUserEmail": "testingteam01@gmail.com",
+    "roles": [
+        "ROLE_ADMIN"
+    ]
+}

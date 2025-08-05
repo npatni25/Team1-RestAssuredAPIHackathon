@@ -4,19 +4,22 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.List;
 
-import com.aventstack.extentreports.util.Assert;
-
+import org.testng.Assert;
 import apiRequests.DieticianLogic;
 import baseAPI.BaseAPI;
+import baseAPI.StoreIDs;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
+import login.UserLoginManager;
+import pojo.UserLoginInfo;
 import utils.jsonReader;
 import utils.jsonReader.ScenarioContext;
-import baseAPI.StoreIDs;
+
 
 public class DieticianSteps {
-
+	
 	private Response response; // Shared across steps
+
 	@Given("Admin user loggedin")
 	public void admin_user_loggedin() {
 		Response response = BaseAPI.adminLogin();
@@ -51,6 +54,7 @@ public class DieticianSteps {
 		List<String> ids = StoreIDs.getAllIds();
 		System.out.println("All IDs: " + ids);
 	}
+	
 
 	@Then("A new dietician should get created")
 	public void a_new_dietician_should_get_created() {

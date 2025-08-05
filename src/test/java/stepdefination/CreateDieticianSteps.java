@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.testng.Assert;
 
+import apiRequests.DieticianLogic;
 import baseAPI.BaseAPI;
 import baseAPI.StoreIDs;
 import io.cucumber.java.en.Given;
@@ -23,8 +24,8 @@ public class CreateDieticianSteps {
 	
 	
 	@SuppressWarnings("unused")
-	@Given("Admin user loggedin")
-	public void admin_user_loggedin() {
+	@Given("Admin user loggedin1")
+	public void admin_user_loggedin1() {
 		Response response = BaseAPI.adminLogin();
 		assertEquals(200, response.getStatusCode());
 		System.out.println("Response Body:");
@@ -32,13 +33,13 @@ public class CreateDieticianSteps {
 		BaseAPI.storeAdminToken();
 	}
 
-	@When("post condition with valid data from sheet {string} with test case no {string} is provided")
-	public void post_condition_with_valid_data_from_sheet_with_test_case_no_is_provided(String sheetName, String testCaseId) {
+	@When("post condition with valid data from sheet {string} with test case no {string} is provided1")
+	public void post_condition_with_valid_data_from_sheet_with_test_case_no_is_provided1(String sheetName, String testCaseId) {
 		
 		this.sheet = sheet;
         this.testCaseId = testCaseId;
         //response = CreateDieticianLogic.createDietician(sheetName, testCaseId); // To create dietician by reading data from excel file
-        response = CreateDieticianLogic.createDieticianWithRandomlyGeneratedData(); //To create dietician with randomly generated data through code
+        response = DieticianLogic.createDieticianWithRandomlyGeneratedData(); //To create dietician with randomly generated data through code
         StoreIDs.storeCreatedDietician(response);
 	    StoreIDs.storeDieticianEmailAsUserName(response);
 	    StoreIDs.storeDieticianPassword(response);
@@ -57,8 +58,8 @@ public class CreateDieticianSteps {
 	
 	}
 
-	@Then("A new dietician should get created")
-	public void a_new_dietician_should_get_created() {
+	@Then("A new dietician should get created1")
+	public void a_new_dietician_should_get_created1() {
 	   
 	    Assert.assertEquals(201,response.getStatusCode());
 	    

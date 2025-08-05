@@ -1,5 +1,7 @@
 package apiRequests;
 
+import static io.restassured.RestAssured.given;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,12 +9,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
+import io.restassured.http.Method;
 
 import org.json.JSONObject;
 
 import apiEndPoints.ApiEndpoints;
 import baseAPI.StoreIDs;
-import groovyjarjarasm.asm.commons.Method;
+//import groovyjarjarasm.asm.commons.Method;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -21,6 +24,7 @@ import pojo.DieticianData;
 import pojo.tokenManager;
 import utils.ConfigReader;
 import utils.jsonReader;
+
 
 public class DieticianLogic {
 
@@ -195,7 +199,7 @@ public class DieticianLogic {
 
 ///////////////////////////////Negative - Create Dietician with Dietician Token///////////////////////////////////////////////////////////////////////
 	public static Response createDietician_DieticianToken(String scenarioName) {
-		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
+		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0NDE2ODIwLCJleHAiOjE3NTQ0NDU2MjB9.17cUB6jpuBO-CgeUjnKl6TJFs0dDQYQyMNCkjPhL38Ys5-SUygjvIUHrMLv6ocYv0yv-JEIjC-jfLCODsQ4gaw";
 		String filePath = ConfigReader.getProperty("JSON_Path");
 
 		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
@@ -251,7 +255,7 @@ public class DieticianLogic {
 
 	public static Response createDietician_PatientToken(String scenarioName) {
 
-		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
+		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0NDE2ODIwLCJleHAiOjE3NTQ0NDU2MjB9.17cUB6jpuBO-CgeUjnKl6TJFs0dDQYQyMNCkjPhL38Ys5-SUygjvIUHrMLv6ocYv0yv-JEIjC-jfLCODsQ4gaw";
 		String filePath = ConfigReader.getProperty("JSON_Path");
 
 		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
@@ -600,8 +604,8 @@ public class DieticianLogic {
 		String invalidId = "a123";
 		String adminToken = tokenManager.getAdminToken();
 		// String dieticianToken = tokenManager.getDieticianToken(); 
-		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
-		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
+		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0NDE2ODIwLCJleHAiOjE3NTQ0NDU2MjB9.17cUB6jpuBO-CgeUjnKl6TJFs0dDQYQyMNCkjPhL38Ys5-SUygjvIUHrMLv6ocYv0yv-JEIjC-jfLCODsQ4gaw";
+		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0NDE2ODIwLCJleHAiOjE3NTQ0NDU2MjB9.17cUB6jpuBO-CgeUjnKl6TJFs0dDQYQyMNCkjPhL38Ys5-SUygjvIUHrMLv6ocYv0yv-JEIjC-jfLCODsQ4gaw";
 		String filePath = ConfigReader.getProperty("JSON_Path");
 
 		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
@@ -663,8 +667,8 @@ public class DieticianLogic {
 		String invalidId = "9999";
 		String adminToken = tokenManager.getAdminToken();
 		// String dieticianToken = tokenManager.getDieticianToken(); 
-		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
-		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0NDE2ODIwLCJleHAiOjE3NTQ0NDU2MjB9.17cUB6jpuBO-CgeUjnKl6TJFs0dDQYQyMNCkjPhL38Ys5-SUygjvIUHrMLv6ocYv0yv-JEIjC-jfLCODsQ4gaw";
+		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0NDE2ODIwLCJleHAiOjE3NTQ0NDU2MjB9.17cUB6jpuBO-CgeUjnKl6TJFs0dDQYQyMNCkjPhL38Ys5-SUygjvIUHrMLv6ocYv0yv-JEIjC-jfLCODsQ4gaw";
 		String filePath = ConfigReader.getProperty("JSON_Path");
 
 		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);

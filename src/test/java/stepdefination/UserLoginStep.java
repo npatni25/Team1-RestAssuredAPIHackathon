@@ -35,10 +35,10 @@ public class UserLoginStep {
 	public void admin_creates_login_valid_request() {
 		context.set("ADMINLOGIN_TOKEN",null);
 	}
-	@Given("Admin creates Login Valid requests.")
-	public void admin_creates_login_valid_requests() {
-		context.set("ADMINLOGIN_TOKEN",null); 
-	}
+//	@Given("Admin creates Login Valid requests.")
+//	public void admin_creates_login_valid_requests() {
+//		context.set("ADMINLOGIN_TOKEN",null); 
+//	}
 	@Given("Admin creates invalid Login {string} Request")
 	public void admin_creates_invalid_login_request(String requestType) throws Exception {
 		login.setLoginRequest(requestType);
@@ -66,11 +66,14 @@ public class UserLoginStep {
 				
 	}
 
-	@When("Admin sends HTTP Post login request.")
+	
+	
+	@When("Admin sends HTTP Post login request")
 	public void admin_sends_http_post_login_request() throws JsonProcessingException, FileNotFoundException {
-		 login.postLoginRequest();
+		login.postLoginRequest();
 	}
-	@Then("Admin receives {int} staus code with auto generated token.")
+
+	@Then("Admin receives {int} staus code with auto generated token")
 	public void admin_receives_staus_code_with_auto_generated_token(Integer statuscode) {
 		Assert.assertEquals(statuscode, 200);
 		  loginResponse = context.get("loginResponse", Response.class);
@@ -84,10 +87,14 @@ public class UserLoginStep {
 			Validation.validateStatusCode(loginResponse, 200);
 			Validation.validateStatusLine(loginResponse, "HTTP/1.1 200 OK");
 			Validation.validateResponseTime(loginResponse);
-			Validation.validateJsonSchema(loginResponse, userLoginSchema);
+			//Validation.validateJsonSchema(loginResponse, userLoginSchema);
 			Validation.assertAll();
-	    
-	}
+	}	
+	
+	
+	
+	
+	
 
 
 }

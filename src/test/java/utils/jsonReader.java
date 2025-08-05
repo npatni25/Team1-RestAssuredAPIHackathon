@@ -1,51 +1,3 @@
-//package utils;
-//
-//import com.fasterxml.jackson.databind.ObjectMapper;
-//
-//import java.io.InputStream;
-//import java.util.List;
-//
-//public class jsonReader {
-//
-//	public static <T> List<T> readJsonList(String filePath, Class<T> clazz) {
-//	    ObjectMapper mapper = new ObjectMapper();
-//	    List<T> list = null;
-//
-//	 
-//	    try (InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(filePath)) {
-//
-//	        if (is == null) {
-//	            throw new RuntimeException("Resource not found: " + filePath);
-//	        }
-//	        // Create a TypeReference for List<DieticianData>
-//	        list = mapper.readValue(is, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
-//	    } catch (Exception e) {
-//	        e.printStackTrace();
-//	        throw new RuntimeException("Failed to read JSON list from resource: " + filePath);
-//	    }
-//	    return list;
-//	}
-//	
-//	public static class ScenarioContext {
-//	    private static ThreadLocal<String> scenarioName = new ThreadLocal<>();
-//
-//	    public static void setScenarioName(String name) {
-//	        scenarioName.set(name);
-//	    }
-//
-//	    public static String getScenarioName() {
-//	        return scenarioName.get();
-//	    }
-//
-//	    public void clear() {
-//	        scenarioName.remove();
-//	    }
-//	}
-//}
-
-
-
-
 
 package utils;
 import utils.ConfigReader;
@@ -99,15 +51,6 @@ public class jsonReader {
 	//Code from Subhadra
 	private static final String testDataFile = ConfigReader.getProperty("testDataFilePath");
 
-    /**
-     * Loads test data from JSON for POST/PUT requests and maps it to the provided POJO class.
-     * Also supports dynamic field population (e.g., statusCode, id, name, etc.).
-     *
-     * @param requestType the request key in JSON (e.g.  create login,"createUser", "updatePatient")
-     * @param clazz       the POJO class to map JSON into
-     * @param <T>         generic type
-     * @return populated POJO
-     */
     public static <T> T loadTestDataForPostPut(String requestType, Class<T> clazz) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -115,7 +58,8 @@ public class jsonReader {
             JsonNode requests = rootNode.get("requests");
 
             for (JsonNode requestNode : requests) {
-                Iterator<Map.Entry<String, JsonNode>> fields = requestNode.fields();
+                @SuppressWarnings("deprecation")
+				Iterator<Map.Entry<String, JsonNode>> fields = requestNode.fields();
 
                 while (fields.hasNext()) {
                     Map.Entry<String, JsonNode> field = fields.next();
@@ -123,7 +67,6 @@ public class jsonReader {
                     if (field.getKey().equalsIgnoreCase(requestType)) {
                         T pojo = objectMapper.treeToValue(field.getValue(), clazz);
 
-                        // Dynamically populate common fields if present
                         setFieldIfExists(pojo, "statusCode", field.getValue(), int.class);
                         setFieldIfExists(pojo, "statusText", field.getValue(), String.class);
                         setFieldIfExists(pojo, "message", field.getValue(), String.class);
@@ -142,12 +85,6 @@ public class jsonReader {
         }
     }
 
-    /**
-     * Loads raw JSON data for GET requests as a JsonNode.
-     *
-     * @param requestType the request key
-     * @return JsonNode of the request data
-     */
     public static JsonNode loadTestDataForGet(String requestType) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -172,14 +109,7 @@ public class jsonReader {
         }
     }
 
-    /**
-     * Utility method to dynamically set a field value on a POJO using reflection.
-     *
-     * @param pojo      target object
-     * @param fieldName field name (e.g., "statusCode", "name")
-     * @param node      JSON node
-     * @param fieldType data type
-     */
+ 
     private static <T> void setFieldIfExists(T pojo, String fieldName, JsonNode node, Class<?> fieldType) {
         if (!node.has(fieldName)) return;
 
@@ -198,13 +128,12 @@ public class jsonReader {
         }
     }
 
-    /**
-     * Capitalizes the first character of the given string (e.g., "statusCode" ➜ "StatusCode").
-     */
+  
     private static String capitalize(String str) {
         return (str == null || str.isEmpty()) ? str
                 : str.substring(0, 1).toUpperCase() + str.substring(1);
     }
+}
 	
 
 
