@@ -13,6 +13,9 @@ import io.cucumber.testng.CucumberOptions;
     		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
     		//"json:target/cucumber-reports/cucumber.json",
     		//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+
+    		//"com.aventstack.chaintest.plugins.ChainTestCucumberListener:"}
+
     		//"com.aventstack.chaintest.plugins.ChainTestCucumberListener:"
     		}
 )

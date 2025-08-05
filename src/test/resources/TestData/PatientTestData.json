@@ -226,5 +226,237 @@
 												 									 			   "Temperature": 175.6,	   	 	   
 												 									 	   	 	   
 												 									 	   	 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
-												 									 	   	 	 }
+												 									 	   	 	 },
+{
+    "scenarioName": "Check dietician able to create patient with valid data",
+    "type": "NEGATIVE",
+    "authType": "NO_AUTH",
+    "endPointURL": "/patient",
+	"requestMethod": "POST",
+    "contentType": "multipart/form-data",
+    "expectedStatusCode": 401,
+    "expectedContentType": "application/json",
+    
+    "includePatientInfo": true,
+    "includePatientVitalsInfo": true,
+    "includePatientReportPDF": false,
+    
+    "FirstName": "Jane",
+    "LastName": "Doe",
+    "ContactNumber": "1234567890",
+    "Email": "jane.doe@example.com",
+    "Allergy": "Peanuts",
+    "FoodPreference": "Vegetarian",
+    "CuisineCategory": "Asian",
+    "DateOfBirth": "1990-05-20",
+    
+    "Weight": "60",
+    "Height": "165",
+    "Temperature": "98.6"
+  },
+  
+  {
+    "scenarioName": "Check admin able to create patient with valid data and admin token",
+    "type": "Negative",
+    "endPointURL": "/patient",
+    "requestMethod": "POST",
+    "authType": "VALID_AUTH_ADMIN_TOKEN",
+    "contentType": "multipart/form-data",
+    "expectedStatusCode": 403,
+    "expectedContentType": "application/json",
+    "includePatientInfo": true,
+    "includePatientVitalsInfo": true,
+    "includePatientReportPDF": false,
+
+    "FirstName": "John",
+    "LastName": "Doe",
+    "ContactNumber": "9876543210",
+    "Email": "johndoe@example.com",
+    "Allergy": "Pollen",
+    "FoodPreference": "Vegetarian",
+    "CuisineCategory": "Indian",
+    "DateOfBirth": "1988-05-20",
+
+    "Weight": "70",
+    "Height": "170",
+    "Temperature": "98.6"
+  },
+  
+  
+  {
+    "scenarioName": "Check admin able to create patient with valid data and admin token",
+    "type": "Negative",
+    "endPointURL": "/patient",
+    "requestMethod": "POST",
+    "authType": "VALID_AUTH_ADMIN_TOKEN",
+    "contentType": "multipart/form-data",
+    "expectedStatusCode": 403,
+    "expectedContentType": "application/json",
+    "includePatientInfo": true,
+    "includePatientVitalsInfo": true,
+    "includePatientReportPDF": false,
+    
+    "FirstName": "Alice",
+    "LastName": "Johnson",
+    "ContactNumber": "RANDOM_CONTACT_NUMBER",
+    "Email": "RANDOM_EMAIL",
+    "Allergy": "Peanuts",
+    "FoodPreference": "Vegetarian",
+    "CuisineCategory": "Indian",
+    "DateOfBirth": "RANDOM_DOB",
+    
+    "Weight": "62.5",
+    "Height": "168.2",
+    "Temperature": "98.6"
+  },
+  
+  {
+    "scenarioName": "Dietician_OnlyAdditionalDetails",
+    "authType": "VALID_AUTH_DITICIAN_TOKEN",
+    "endPointURL": "/patient",
+	 "requestMethod": "POST",
+    "height": "180",
+    "weight": "75",
+    "temperature": "98.6",
+    "foodPreference": "Vegan",
+    "allergy": "Nuts",
+    "cuisineCategory": "Indian",
+    "expectedStatusCode": 400
+  },
+  
+  {
+    "scenario": "Admin_CreatePatient_Valid",
+    "endPointURL": "/patient",
+	 "requestMethod": "POST",
+    "type": "NEGATIVE",
+    "authType": "VALID_AUTH_ADMIN_TOKEN",
+    "contentType": "multipart/form-data",
+    "expectedStatusCode": 403,
+    "expectedContentType": "application/json",
+
+    "FirstName": "John",
+    "LastName": "Doe",
+    "ContactNumber": "9876543210",
+    "Email": "john.doe@admin.com",
+    "Allergy": "None",
+    "FoodPreference": "Vegetarian",
+    "CuisineCategory": "Indian",
+    "DateOfBirth": "1990-01-01",
+    "Weight": "75",
+    "Height": "180",
+    "Temperature": "98.6"
+  },
+  
+  {
+    "scenarioName": "Invalid_MandatoryDetails",
+    "type": "Negative",
+    "endPointURL": "/patient",
+	"requestMethod": "POST",
+    "authType": "VALID_AUTH_DITICIAN_TOKEN",
+    "contentType": "multipart/form-data",
+    "expectedStatusCode": 400,
+    "expectedContentType": "application/json",
+    "FirstName": "",  
+    "LastName": "",  
+    "ContactNumber": "123",  
+    "Email": "invalid-email-format",  
+    "Allergy": "",
+    "FoodPreference": "",
+    "CuisineCategory": "",
+    "DateOfBirth": "",
+    
+    "Weight": "64",
+    "Height": "5.6",
+    "Temperature": "98.7"
+  },
+  
+  
+  {
+    "scenarioName": "InvalidAdditionalDetails",
+    "endPointURL": "/patient",
+	"requestMethod": "POST",
+    "type": "negative",
+    "authType": "VALID_AUTH_DITICIAN_TOKEN",
+    "contentType": "multipart/form-data",
+    "expectedStatusCode": 400,
+    "expectedContentType": "application/json",
+
+    "FirstName": "John",
+    "LastName": "Doe",
+    "ContactNumber": "1234567890",
+    "Email": "john.doe@example.com",
+    "DateOfBirth": "1990-01-01",
+
+    "Allergy": "",    
+    "FoodPreference": "???", 
+    "CuisineCategory": "123",  
+
+    "Weight": "",
+    "Height": "",
+    "Temperature": ""
+  },
+  
+  {
+    "scenario": "ValidData_InvalidMethod",
+    "authType": "VALID_AUTH_DITICIAN_TOKEN",
+    "endPointURL": "/patient",
+	"requestMethod": "POST",
+    "expectedStatusCode": 405,
+    "expectedContentType": "application/json",
+    "contentType": "multipart/form-data",
+    "FirstName": "Test",
+    "LastName": "User",
+    "ContactNumber": "1234567890",
+    "Email": "testuser@example.com",
+    "Allergy": "None",
+    "FoodPreference": "Vegan",
+    "CuisineCategory": "Asian",
+    "DateOfBirth": "1990-01-01",
+    "Weight": "70",
+    "Height": "170",
+    "Temperature": "98.6"
+  },
+  
+  {
+    "scenario": "Dietician_CreatePatient_ValidData",
+    "authType": "VALID_AUTH_DITICIAN_TOKEN",
+    "endPointURL": "/patient",
+	"requestMethod": "POST",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "ContactNumber": "1234567890",
+    "Email": "john.doe@example.com",
+    "Allergy": "None",
+    "FoodPreference": "Vegetarian",
+    "CuisineCategory": "Asian",
+    "DateOfBirth": "1990-01-01",
+    "Weight": "70",
+    "Height": "175",
+    "Temperature": "98.6",
+    "expectedStatusCode": 404,
+    "contentType": "multipart/form-data",
+    "expectedContentType": "application/json"
+  },
+  
+  {
+  "scenarioName": "InvalidContentType",
+  "authType": "VALID_AUTH_DITICIAN_TOKEN",
+  "endPointURL": "/patient",
+   "requestMethod": "POST",
+  "FirstName": "Sam",
+  "LastName": "Wilson",
+  "ContactNumber": "9876543210",
+  "Email": "sam.wilson@example.com",
+  "Allergy": "None",
+  "FoodPreference": "Vegetarian",
+  "CuisineCategory": "Indian",
+  "DateOfBirth": "1990-01-01",
+  "Weight": "70",
+  "Height": "170",
+  "Temperature": "98.6",
+  "contentType": "application/json",
+  "expectedStatusCode": 415,
+  "expectedContentType": "application/json"
+}
+												 									 	   	 	 
 ]

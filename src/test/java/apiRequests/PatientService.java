@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.given;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.testng.Assert;
 
@@ -14,12 +15,14 @@ import apiEndPoints.ApiEndpoints;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.util.BeanUtil;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import login.TokenManager;
 import pojo.PatientInfo;
 import pojo.PatientTestData;
 import pojo.PatientVitalsInfo;
+import pojo.tokenManager;
 import utils.ConfigReader;
 import utils.jsonReader;
 
@@ -240,5 +243,74 @@ public class PatientService {
 	public static String replacePatientId(String urlTemplate, String patientId) {
 		return urlTemplate.replace("{patientId}", patientId);
 	}
+       	public static Response createPatientWithInvalidMethod(String scenarioName) {
+	    String patientReportPDFPath = ConfigReader.getProperty("patientReportPDFPath");
+	    PatientTestData patientTestData = getTestDataForScenario(scenarioName);
+	    File patientReportPDFFile = new File(patientReportPDFPath);
+
+	    RequestSpecification createPatientBaseReq = requestSpecification
+	            .spec(addAuthentication(scenarioName, patientTestData.getAuthType()))
+	            .contentType(ContentType.MULTIPART);
+
+	    RequestSpecification regAddPatient = given().log().all().spec(createPatientBaseReq)
+	            .spec(addPatientInfo(scenarioName)).spec(addPatientVitalsInfo(scenarioName))
+	            .multiPart("file", patientReportPDFFile, "application/pdf");
+
+	    response = regAddPatient.when().put(ApiEndpoints.PATIENT_API_PATH.getResources()).then().log().all().extract()
+	            .response();
+
+	    return response;
+	}
+	
+	public static Response createPatientWithInvalidEndpoint(String scenarioName) {
+	    String filePath = ConfigReader.getProperty("JSON_Path");
+
+	    List<PatientTestData> allPatients = jsonReader.readJsonList(filePath, PatientTestData.class);
+	    List<PatientTestData> filteredPatients = allPatients.stream()
+	            .filter(d -> scenarioName.equalsIgnoreCase(d.getScenarioName()))
+	            .collect(Collectors.toList());
+
+	    if (filteredPatients.isEmpty()) {
+	        throw new RuntimeException("No data found for scenario: " + scenarioName);
+	    }
+
+	    PatientTestData patientData = filteredPatients.get(0);
+
+	    RequestSpecification request = RestAssured.given()
+	            .baseUri(ConfigReader.getProperty("BaseURL"))
+	            .basePath("/invalid/api/patient") 
+	            .contentType(ContentType.JSON)
+	            .header("Authorization", "Bearer " + tokenManager.getAdminToken())
+	            .body(patientData);
+
+	    //LoggerLoad.info("Sending POST request to invalid endpoint with valid data...");
+	    Response response = request.post();
+
+	    //LoggerLoad.info("Response Status Code: " + response.getStatusCode());
+	    //LoggerLoad.info("Response Body: " + response.getBody().asPrettyString());
+
+	    return response;
+	}
+
+   
+	public static Response createPatientWithInvalidContentType(String scenarioName) {
+	    String patientReportPDFPath = ConfigReader.getProperty("patientReportPDFPath");
+	    PatientTestData patientTestData = getTestDataForScenario(scenarioName);
+	    File patientReportPDFFile = new File(patientReportPDFPath);
+
+	    RequestSpecification createPatientBaseReq = requestSpecification
+	        .spec(addAuthentication(scenarioName, patientTestData.getAuthType()))
+	        .contentType("application/json"); // Invalid for multipart/form-data
+
+	    RequestSpecification regAddPatient = given().log().all().spec(createPatientBaseReq)
+	        .spec(addPatientInfo(scenarioName))
+	        .spec(addPatientVitalsInfo(scenarioName))
+	        .multiPart("file", patientReportPDFFile, "application/pdf");
+
+	    return regAddPatient.when()
+	        .post(ApiEndpoints.PATIENT_API_PATH.getResources())
+	        .then().log().all().extract().response();
+	}
+
 
 }
