@@ -35,11 +35,18 @@ import context.ScenarioContext;
 	        return new PrintStream(new FileOutputStream(LOG_PATH, true));
 	    }
 
+
 	/*    public static RequestSpecification requestSpecWithToken() throws FileNotFoundException {
 	        return new RequestSpecBuilder()
 	                .setBaseUri(BASE_URL)
 	                //.addHeader("Authorization", "Bearer " + token)
 	                .addHeader("Authorization","Bearer "+ context.get("ADMINLOGIN_TOKEN") )
+
+	    public static RequestSpecification requestSpecWithToken(String token) throws FileNotFoundException {
+	        return new RequestSpecBuilder()
+	                .setBaseUri(BASE_URL)
+	                .addHeader("Authorization", "Bearer " + token)
+
 	                .addFilter(RequestLoggingFilter.logRequestTo(getLogger()))
 	                .addFilter(ResponseLoggingFilter.logResponseTo(getLogger()))
 	                .setContentType(ContentType.JSON)
@@ -67,6 +74,7 @@ import context.ScenarioContext;
 		}
 		
 
+
 	    public static RequestSpecification requestSpecWithoutToken() throws FileNotFoundException {
 	        return new RequestSpecBuilder()
 	                .setBaseUri(BASE_URL)
@@ -76,7 +84,10 @@ import context.ScenarioContext;
 	                .build();
 	    }
 
+
 	    public  ResponseSpecification responseSpecOK() {
+
+	    
 	        return new ResponseSpecBuilder()
 	                .expectStatusCode(200)
 	                .expectContentType(ContentType.JSON)
@@ -96,6 +107,7 @@ import context.ScenarioContext;
 			return responseSpec;
 		}
 	}
+
 
 
 
