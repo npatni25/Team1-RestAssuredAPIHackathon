@@ -1,34 +1,14 @@
 package hooks;
 
-import io.cucumber.java.After;
-import baseAPI.StoreIDs;
-
-import static io.restassured.RestAssured.given;
-
-import pojo.tokenManager;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class Hooks {
-	
-	//For CLEAN UP
-	//To delete stored dietician ID... Run this code at the end for the cleanup
-//	@After 
-//	public void cleanup() {
-//        String token = tokenManager.getAdminToken(); // or however you get your token
-//
-//        for (String id : StoreIDs.getAll()) {
-//            given()
-//                .header("Authorization", "Bearer " + token)
-//                .delete("/dieticians/" + id)
-//                .then()
-//                .log().ifError(); // Log only if deletion fails
-//        }
-//
-//        StoreIDs.clear();
-//    }
-	
-//	@After
-//	public void clean ()
-//	{
-//		StoreIDs.clearAll();
-//	}
+    public static Scenario currentScenario;
+
+    @Before
+    public void beforeScenario(Scenario scenario) {
+        currentScenario = scenario;
+        System.out.println("Running Scenario: " + scenario.getName());
+    }
 }

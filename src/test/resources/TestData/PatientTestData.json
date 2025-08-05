@@ -1,0 +1,230 @@
+ [
+	{
+	   "scenarioName": "Check dietician able to create patient with valid data and token",
+	   "type": "Positive",
+	   "endPointURL": "/patient",
+	   "requestMethod": "POST",
+	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+	   "contentType":"multipart/form-data",
+	   "expectedStatusCode": 201,
+	   "expectedStatusLine": "Created",
+	   "expectedContentType": "application/json",
+	   
+	   "includePatientInfo": true,
+	   "includePatientVitalsInfo": false,
+	   "includePatientReportPDF": false,
+	   
+	   "FirstName": "LN",
+	   "LastName": "FN",
+	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+	   "Email": "RANDOM_EMAIL",
+	   "Allergy": "ALMOND",
+	   "FoodPreference": "Vegan",
+	   "CuisineCategory":"Indian",
+	   "DateOfBirth": "RANDOM_DOB",
+	   
+	   "Weight": 175.6,
+	   "Height": 5.11,
+	   "Temperature": 175.6,
+	   
+	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\CBC-sample.pdf"
+	 },
+	 {
+	 	   "scenarioName": "Check dietician able to add new reports for existing patient only with valid mandatory details",
+	 	   "type": "Positive",
+	 	   "endPointURL": "/patient/{patientId}",
+	 	   "requestMethod": "PUT",
+	 	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+	 	   "contentType":"multipart/form-data",
+	 	   "expectedStatusCode": 200,
+	 	   "expectedStatusLine": "OK",
+	 	   "expectedContentType": "application/json",
+	 	   
+	 	   "includePatientInfo": true,
+	 	   "includePatientVitalsInfo": false,
+	 	   "includePatientReportPDF": true,
+	 	   
+	 	   "FirstName": "LN",
+	 	   "LastName": "FN",
+	 	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+	 	   "Email": "RANDOM_EMAIL",
+	 	   "Allergy": "ALMOND",
+	 	   "FoodPreference": "Vegan",
+	 	   "CuisineCategory":"Indian",
+	 	   "DateOfBirth": "RANDOM_DOB",
+	 	   
+	 	   
+	 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
+	 	 },
+	   	 {
+	   	 	   "scenarioName": "Check dietician able to add new reports for existing patient only with valid additional details",
+	   	 	   "type": "Positive",
+	   	 	   "endPointURL": "/patient/{patientId}",
+	   	 	   "requestMethod": "PUT",
+	   	 	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+	   	 	   "contentType":"multipart/form-data",
+	   	 	   "expectedStatusCode": 200,
+	   	 	   "expectedStatusLine": "OK",
+	   	 	   "expectedContentType": "application/json",
+	   	 	   
+	   	 	   "includePatientInfo": true,
+	   	 	   "includePatientVitalsInfo": true,
+	   	 	   "includePatientReportPDF": true,
+	   	 	   
+	   	 	   "FirstName": "LN",
+	   	 	   "LastName": "FN",
+	   	 	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+	   	 	   "Email": "RANDOM_EMAIL",
+	   	 	   "Allergy": "ALMOND",
+	   	 	   "FoodPreference": "Vegan",
+	   	 	   "CuisineCategory":"Indian",
+	   	 	   "DateOfBirth": "RANDOM_DOB",
+			   
+			   "Weight": 175.6,
+			   "Height": 5.11,
+			   "Temperature": 175.6,	   	 	   
+	   	 	   
+	   	 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
+	   	 	 },
+			 {
+			 	   "scenarioName": "Check dietician able to add new reports  for existing patient with invalid data",
+			 	   "type": "Negtive",
+			 	   "endPointURL": "/patient/{patientId}",
+			 	   "requestMethod": "PUT",
+			 	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+			 	   "contentType":"multipart/form-data",
+			 	   "expectedStatusCode": 400,
+			 	   "expectedStatusLine": "Bad Request",
+			 	   "expectedContentType": "application/json",
+			 	   
+			 	   "includePatientInfo": true,
+			 	   "includePatientVitalsInfo": false,
+			 	   "includePatientReportPDF": true,
+			 	   
+			 	   "FirstName": "LN",
+			 	   "LastName": "FN",
+			 	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+			 	   "Email": "RANDOM_EMAIL",
+			 	   "Allergy": "noneinvalid",
+			 	   "FoodPreference": "Vegan",
+			 	   "CuisineCategory":"Indian",
+			 	   "DateOfBirth": "RANDOM_DOB",
+			 	   
+			 	   
+			 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
+			 	 },
+				 			 {
+				 			 	   "scenarioName": "Check dietician able to add new reports for existing patient with valid data and invalid patient id as path parameter",
+				 			 	   "type": "Negtive",
+				 			 	   "endPointURL": "/patient/4565678757",
+				 			 	   "requestMethod": "PUT",
+				 			 	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+				 			 	   "contentType":"multipart/form-data",
+				 			 	   "expectedStatusCode": 404,
+				 			 	   "expectedStatusLine": "Not Found",
+				 			 	   "expectedContentType": "application/json",
+				 			 	   
+				 			 	   "includePatientInfo": true,
+				 			 	   "includePatientVitalsInfo": false,
+				 			 	   "includePatientReportPDF": true,
+				 			 	   
+				 			 	   "FirstName": "LN",
+				 			 	   "LastName": "FN",
+				 			 	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+				 			 	   "Email": "RANDOM_EMAIL",
+				 			 	   "Allergy": "noneinvalid",
+				 			 	   "FoodPreference": "Vegan",
+				 			 	   "CuisineCategory":"Indian",
+				 			 	   "DateOfBirth": "RANDOM_DOB",
+				 			 	   
+				 			 	   
+				 			 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
+				 			 	 },
+								 {
+								 	   "scenarioName": "Check dietician able to add new reports for existing patient  with valid data and invalid method",
+								 	   "type": "Negative",
+								 	   "endPointURL": "/patient/{patientId}",
+								 	   "requestMethod": "POST",
+								 	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+								 	   "contentType":"multipart/form-data",
+								 	   "expectedStatusCode": 405,
+								 	   "expectedStatusLine": "Method Not Allowed",
+								 	   "expectedContentType": "application/json",
+								 	   
+								 	   "includePatientInfo": true,
+								 	   "includePatientVitalsInfo": false,
+								 	   "includePatientReportPDF": true,
+								 	   
+								 	   "FirstName": "LN",
+								 	   "LastName": "FN",
+								 	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+								 	   "Email": "RANDOM_EMAIL",
+								 	   "Allergy": "ALMOND",
+								 	   "FoodPreference": "Vegan",
+								 	   "CuisineCategory":"Indian",
+								 	   "DateOfBirth": "RANDOM_DOB",
+								 	   
+								 	   
+								 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
+								 	 },
+									  	 {
+									 	   	 	   "scenarioName": "Check dietician able to add new reports for existing patient with valid data and invalid endpoint",
+									 	   	 	   "type": "Positive",
+									 	   	 	   "endPointURL": "/abc/{patientId}",
+									 	   	 	   "requestMethod": "PUT",
+									 	   	 	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+									 	   	 	   "contentType":"multipart/form-data",
+									 	   	 	   "expectedStatusCode": 405,
+									 	   	 	   "expectedStatusLine": "OK",
+									 	   	 	   "expectedContentType": "application/json",
+									 	   	 	   
+									 	   	 	   "includePatientInfo": true,
+									 	   	 	   "includePatientVitalsInfo": true,
+									 	   	 	   "includePatientReportPDF": true,
+									 	   	 	   
+									 	   	 	   "FirstName": "LN",
+									 	   	 	   "LastName": "FN",
+									 	   	 	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+									 	   	 	   "Email": "RANDOM_EMAIL",
+									 	   	 	   "Allergy": "ALMOND",
+									 	   	 	   "FoodPreference": "Vegan",
+									 	   	 	   "CuisineCategory":"Indian",
+									 	   	 	   "DateOfBirth": "RANDOM_DOB",
+									 			   
+									 			   "Weight": 175.6,
+									 			   "Height": 5.11,
+									 			   "Temperature": 175.6,	   	 	   
+									 	   	 	   
+									 	   	 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
+									 	   	 	 },
+																			  	 {
+												 									 	   	 	   "scenarioName": "Check dietician able to add new reports for existing patient  with valid data and invalid content type",
+												 									 	   	 	   "type": "Positive",
+												 									 	   	 	   "endPointURL": "/abc/{patientId}",
+												 									 	   	 	   "requestMethod": "PUT",
+												 									 	   	 	   "authType": "VALID_AUTH_DITICIAN_TOKEN",
+												 									 	   	 	   "contentType":"application/json",
+												 									 	   	 	   "expectedStatusCode": 405,
+												 									 	   	 	   "expectedStatusLine": "OK",
+												 									 	   	 	   "expectedContentType": "application/json",
+												 									 	   	 	   
+												 									 	   	 	   "includePatientInfo": true,
+												 									 	   	 	   "includePatientVitalsInfo": true,
+												 									 	   	 	   "includePatientReportPDF": true,
+												 									 	   	 	   
+												 									 	   	 	   "FirstName": "LN",
+												 									 	   	 	   "LastName": "FN",
+												 									 	   	 	   "ContactNumber": "RANDOM_CONTACT_NUMBER",
+												 									 	   	 	   "Email": "RANDOM_EMAIL",
+												 									 	   	 	   "Allergy": "ALMOND",
+												 									 	   	 	   "FoodPreference": "Vegan",
+												 									 	   	 	   "CuisineCategory":"Indian",
+												 									 	   	 	   "DateOfBirth": "RANDOM_DOB",
+												 									 			   
+												 									 			   "Weight": 175.6,
+												 									 			   "Height": 5.11,
+												 									 			   "Temperature": 175.6,	   	 	   
+												 									 	   	 	   
+												 									 	   	 	   "patientReportPDFPath": "C:\\Users\\lavan\\eclipse-workspace\\LATESTJULYRESTASSURED\\Team1-RestAssuredAPIHackathon\\src\\test\\resources\\TestData\\Diabetic_lab.pdf.pdf"
+												 									 	   	 	 }
+]

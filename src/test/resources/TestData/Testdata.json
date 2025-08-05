@@ -1,0 +1,22 @@
+[
+  {
+    "FirstName": "Lavanya",
+    "LastName": "Saireddy",
+    "ContactNumber": "9876543210",
+    "Email": "lavanya@example.com",
+    "Allergy": "Peanuts",
+    "FoodPreference": "Vegetarian",
+    "CuisineCategory": "South Indian",
+    "DateOfBirth": "1995-06-15"
+  },
+  {
+    "FirstName": "John",
+    "LastName": "Doe",
+    "ContactNumber": "1234567890",
+    "Email": "john@example.com",
+    "Allergy": "None",
+    "FoodPreference": "Non-Vegetarian",
+    "CuisineCategory": "Italian",
+    "DateOfBirth": "1980-12-30"
+  }
+]
