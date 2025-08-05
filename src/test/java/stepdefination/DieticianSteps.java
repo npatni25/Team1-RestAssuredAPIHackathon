@@ -251,9 +251,7 @@ public class DieticianSteps {
 		String scenarioName = ScenarioContext.getScenarioName();
 		response = DieticianLogic.deleteDietician(scenarioName);
 	}
-	
-	
-	
+
 	
 	
 	
