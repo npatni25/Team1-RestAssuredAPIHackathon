@@ -3,7 +3,8 @@ package stepdefination;
 import static org.testng.Assert.assertEquals;
 
 import java.util.List;
-import org.testng.Assert;
+
+import com.aventstack.extentreports.util.Assert;
 
 import apiRequests.DieticianLogic;
 import baseAPI.BaseAPI;
@@ -16,9 +17,6 @@ import baseAPI.StoreIDs;
 public class DieticianSteps {
 
 	private Response response; // Shared across steps
-	private String sheet;
-	private String testCaseId;
-
 	@Given("Admin user loggedin")
 	public void admin_user_loggedin() {
 		Response response = BaseAPI.adminLogin();
@@ -253,9 +251,7 @@ public class DieticianSteps {
 		String scenarioName = ScenarioContext.getScenarioName();
 		response = DieticianLogic.deleteDietician(scenarioName);
 	}
-	
-	
-	
+
 	
 	
 	

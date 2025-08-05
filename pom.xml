@@ -71,7 +71,16 @@
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
     <version>7.27.0</version>
+
+
 </dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>5.3.30</version> <!-- or latest compatible version -->
+</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 <dependency>
@@ -79,6 +88,7 @@
     <artifactId>cucumber-junit</artifactId>
     <version>7.27.0</version>
     <scope>test</scope>
+
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest -->
@@ -157,11 +167,33 @@
   <version>2.15.2</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
-<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-rest-assured</artifactId>
-    <version>2.29.1</version>
+		<!--https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-rest-assured</artifactId>
+			<version>2.29.1</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.38</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-cucumber7-jvm</artifactId>
+			<version>2.20.1</version> <!-- or latest -->
+
+		</dependency>
+		
+		
+		<dependency>
+    <groupId>commons-beanutils</groupId>
+    <artifactId>commons-beanutils</artifactId>
+    <version>1.9.4</version> <!-- or latest stable version -->
 </dependency>
 
   </dependencies> 

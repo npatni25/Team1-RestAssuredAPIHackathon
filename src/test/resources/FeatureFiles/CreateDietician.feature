@@ -23,6 +23,7 @@ Feature: Verify create dieticians sceanrios
     When post condition with auto generate valid data
     Then A new dietician should get created
 
+
   @createDietician
   Scenario Outline: Verify invalid authentication Scenarios
     Given User is setting auth as "<Scenario>"
@@ -63,26 +64,17 @@ Feature: Verify create dieticians sceanrios
       | Scenario                     | Expected                             |
       | CreateDietician_Invalid Data | Admin recieves 400 Bad Request error |
 
-  @createDietician
-  Scenario Outline: Verify create dietician with invalid PinCode
-    Given User is setting auth as "<Scenario>"
-    When Post condition to create dietician with invalid PinCode from json data file
-    Then User should see <Expected>
-
-    Examples: 
-      | Scenario                        | Expected                                               |
-      | CreateDietician_Invalid PinCode | Admin recieves "Pincode should contain 6 digits" error |
-
-  @createDietician
-  Scenario Outline: Verify create dietician with exisiting contact and DOB in combination
+ @createDietician
+  Scenario Outline: Verify invalid authentication Scenarios
     Given User is setting auth as "<Scenario>"
     When Post condition to create dietician with invalid PinCode from json data file
     Then User should see <Expected>
 
     Examples: 
       | Scenario                             | Expected                                                                                                        |
+      | CreateDietician_Invalid PinCode      | Admin recieves "Pincode should contain 6 digits" error                                                          |
       | CreateDietician_Same Contact and DOB | Admin recieves same cont & dob error "Dietician user with given date of birth and contact already exists" error |
-
+ 
   @createDietician
   Scenario Outline: Verify create dietician with invalid API request_PUT
     Given User is setting auth as "<Scenario>"

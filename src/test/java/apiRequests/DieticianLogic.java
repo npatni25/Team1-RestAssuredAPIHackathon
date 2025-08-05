@@ -1,30 +1,26 @@
 package apiRequests;
 
-import io.restassured.RestAssured;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-
-import static io.restassured.RestAssured.given;
-
-import utils.ConfigReader;
-import utils.jsonReader;
-
-import java.util.Optional;
-import java.util.Random;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-import org.json.JSONObject;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONObject;
 
 import apiEndPoints.ApiEndpoints;
 import baseAPI.StoreIDs;
+import groovyjarjarasm.asm.commons.Method;
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import pojo.DieticianData;
 import pojo.tokenManager;
+import utils.ConfigReader;
+import utils.jsonReader;
 
 public class DieticianLogic {
 
@@ -199,8 +195,7 @@ public class DieticianLogic {
 
 ///////////////////////////////Negative - Create Dietician with Dietician Token///////////////////////////////////////////////////////////////////////
 	public static Response createDietician_DieticianToken(String scenarioName) {
-		//String dieticianToken = tokenManager.getAdminToken();
-		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
 		String filePath = ConfigReader.getProperty("JSON_Path");
 
 		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
@@ -256,7 +251,7 @@ public class DieticianLogic {
 
 	public static Response createDietician_PatientToken(String scenarioName) {
 
-		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
 		String filePath = ConfigReader.getProperty("JSON_Path");
 
 		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
@@ -598,16 +593,15 @@ public class DieticianLogic {
 		return response;
 	}
 
-	//////////////// --------------InValidAuth - NoAuth/PATIENT TOKEN/DIETICIAN
-	//////////////// TOKEN---------------///////////////////////////
+	//////////////// UPDATE DIETICIAN///////////////////////////
 
 	public static Response updateDietician(String scenarioName) {
 		String dieticianId = StoreIDs.getLatestStoredDieticianID();
 		String invalidId = "a123";
 		String adminToken = tokenManager.getAdminToken();
 		// String dieticianToken = tokenManager.getDieticianToken(); 
-		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
-		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
+		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZTQ3QGV4YW1wbGUuY29tIiwiaWF0IjoxNzU0MzQ5NzYwLCJleHAiOjE3NTQzNzg1NjB9.Qw7uPZGGXX7ULnzkpRany73DwWhaNF0-68tgetQ8IY-vTmYqiKZFGYw0_YUuYfWrQl94_oDwufNdxhUV6VnD1g";
 		String filePath = ConfigReader.getProperty("JSON_Path");
 
 		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
@@ -698,6 +692,74 @@ public class DieticianLogic {
 				.baseUri(baseUrl)
 				.basePath(endpoint)
 				.header("Authorization", auth);
+
+		Object bodyPayload = dietician;
+
+		Response response;
+		switch (method.toUpperCase()) {
+		case "GET":
+			response = request.get();
+			break;
+		case "POST":
+			response = request.body(bodyPayload).post();
+			break;
+		case "PUT":
+			response = request.body(bodyPayload).put();
+			break;
+		case "DELETE":
+			response = request.delete();
+			break;
+		default:
+			throw new IllegalArgumentException("Unsupported HTTP method: " + method);
+		}
+
+		System.out.println("Response:\n" + response.asPrettyString());
+		System.out.println("Response code:\n" + response.getStatusCode());
+		return response;
+	}
+	
+	//////merged create dietician///////
+	
+	public static Response createDieticianValidandInvalid(String scenarioName) {
+		String dieticianId = StoreIDs.getLatestStoredDieticianID();
+		String invalidId = "a123";
+		String adminToken = tokenManager.getAdminToken();
+		// String dieticianToken = tokenManager.getDieticianToken(); 
+		String dieticianToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String patientToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjd2VoZWIudHRlcHJmckB0ZXN0LmNvbSIsImlhdCI6MTc1NDMxNTYxOCwiZXhwIjoxNzU0MzQ0NDE4fQ.RpJ6nVtRqreoi9ppbT7tYvnqen1eGgq1aKFBhffg9QcbGL_9ZzdWpyrbGCZDFxaM0mEqqvOrGopdbbx44_jOBA";
+		String filePath = ConfigReader.getProperty("JSON_Path");
+
+		List<DieticianData> allDieticians = jsonReader.readJsonList(filePath, DieticianData.class);
+		Optional<DieticianData> matchedDietician = allDieticians.stream()
+				.filter(d -> scenarioName.equalsIgnoreCase(d.getScenario())).findFirst();
+
+		if (!matchedDietician.isPresent()) {
+			throw new RuntimeException("Scenario not found in JSON: " + scenarioName);
+		}
+
+		DieticianData dietician = matchedDietician.get();
+
+		String method = dietician.getMethod();
+		//String endpoint = replaceDynamicData(dietician.getEndPoint(), dieticianId, invalidId, dieticianToken,adminToken, patientToken); // it will take any one of this whichever is given in json data file
+		String endPoint =dietician.getEndPoint();
+		System.out.println("Method: " + method);
+		System.out.println("Full Path: " + endPoint);
+		
+		//String auth =dietician.getauthType();
+		String auth = replaceDynamicData(dietician.getauthType(), dieticianId, invalidId, dieticianToken, adminToken, patientToken); // it will take any one of this whichever is given in json data
+		System.out.println("Auth type: " + auth);
+		
+		String baseUrl = ConfigReader.getProperty("baseUrl");
+
+		System.out.println("Method: " + method);
+		System.out.println("Full Path: " + endPoint);
+		System.out.println("Auth type: " + auth);
+
+		RequestSpecification request = given()
+				.baseUri(baseUrl)
+				.basePath(endPoint)
+				.header("Authorization", auth)
+				.contentType(dietician.getContentType());
 
 		Object bodyPayload = dietician;
 

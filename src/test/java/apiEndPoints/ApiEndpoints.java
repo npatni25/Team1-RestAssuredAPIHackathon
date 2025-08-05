@@ -6,10 +6,14 @@ public enum ApiEndpoints {
 		APILoginPost("/login"),
 		APILogoutGet("/logoutdietician"),
 		CreateDietician("/dietician"),
+
+		PATIENT_API_PATH(""),
+
 		InvalidDieticianEndPoint("/diet"),
+
 	    GetAllMorbidities ("/morbidity"),
 	    GetMorbidityByTestname("/morbidity/{morbidityName}");
-	
+	    
 	
 	private String resources;
 	ApiEndpoints(String resources){
